@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Exponent by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
--->
 <html>
 	<head>
 		<title>Dynamic Title</title>
