@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	Exponent by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
--->
 <html>
 	<head>
-		<title>Untitled</title>
+		<title>Discussions</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -18,7 +13,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<h1><a href="index.html">Exponent</a></h1>
+				<h1><a href="https://github.com/cisw31class/user-authentication-"><!--PLACEHOLDER--></a></h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="#">Sign Up</a></li>
@@ -29,7 +24,8 @@
 								<ul>
 									<li><a href="index.php">Home</a></li>
 									<li><a href="profile.php">Profile</a></li>
-									<li><a href="#">Discussions</a></li>
+									<li><a href="discussions.php">Discussions</a></li>
+                                    <li><a href="all_nerds.php">Classmates</a></li>
 									<li><a href="contact.php">Contact</a></li>
 									<li>
 										<span>Status</span>
@@ -48,8 +44,8 @@
 		<!-- Main -->
 			<div id="main" class="container">
 				<header class="major">
-					<h2>Left Sidebar</h2>
-					<p>Faucibus neque adipiscing mi lorem semper blandit sed consequat</p>
+					<h2>Discussions</h2>
+					<p>If you see something of interest then join...otherwise start your own</p>
 				</header>
 				<div class="row 150%">
 					<div class="4u 12u$(medium)">
@@ -57,22 +53,27 @@
 						<!-- Sidebar -->
 							<section id="sidebar">
 								<section>
-									<h3>Magna Feugiat</h3>
-									<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit..</p>
+									<h3>Linux</h3>
+									<p>Installation and configuration, we look at vhosts as well as the apache config file.
+                                    The command line is an important tool for developers but it may seem daunting to
+                                    some. Since we are Linux nerds we talk about the command line too, and all the cool
+                                    things it can do.</p>
 									<footer>
 										<ul class="actions">
-											<li><a href="#" class="button small alt">Learn More</a></li>
+											<li><a href="#" class="button small alt">Bookmark</a></li>
 										</ul>
 									</footer>
 								</section>
 								<hr />
 								<section>
-									<a href="#" class="image fit"><img src="images/pic08.jpg" alt="" /></a>
-									<h3>Amet Lorem Tempus</h3>
-									<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+									<a href="#" class="image fit"><img src="images/databases.png" alt="" /></a>
+									<h3>PHP and MySQL</h3>
+									<p>Amazing power inside such a small tool. The database can be separated from
+                                    the main server or it can run parallel on the same machine. Jump in and we will
+                                    teach you how databases power websites.</p>
 									<footer>
 										<ul class="actions">
-											<li><a href="#" class="button small alt">Learn More</a></li>
+											<li><a href="#" class="button small alt">Bookmark</a></li>
 										</ul>
 									</footer>
 								</section>
@@ -83,18 +84,24 @@
 
 						<!-- Content -->
 							<section id="content">
-								<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-								<h3>Dolore Amet Consequat</h3>
-								<p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
-								<p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique.</p>
-								<h3>Sed Magna Ornare</h3>
-								<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.</p>
+								<a href="#" class="image fit"><img src="images/discussions.png" alt="" /></a>
+								<h3>We need a volunteer</h3>
+								<p>Someone needs to come up with content for this page and it has to be
+                                relevant to the rest of the website and obviously to the project. Remember
+                                this page will only be visible to those who are authenticated and given
+                                permission (those who are logged in).</p>
+
+								<h3>Some ideas...</h3>
+								<p>You could also bring up different ways that a current discussion can branch out.
+                                    Separate them with bullets (ul). For example, "When installing a fresh copy of MACOS,
+                                    by default apache is already there, it just needs to be configured"...or something
+                                along those lines.</p>
 								<ul>
-									<li>Faucibus orci lobortis ac adipiscing integer.</li>
-									<li>Col accumsan arcu mi aliquet placerat.</li>
-									<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-									<li>Blandit massa non blandit tempor interdum.</li>
-									<li>Lacinia mattis arcu nascetur lobortis.</li>
+									<li>Mac, the "Unix like" operating system</li>
+									<li>Recursively or not? Whats the difference?</li>
+									<li>Migrations and why they are so cool</li>
+									<li>Building a server...what you will need</li>
+									<li>Multi-threading is the norm</li>
 								</ul>
 							</section>
 
@@ -104,63 +111,8 @@
 
 		<!-- Footer -->
 			<footer id="footer">
-				<div class="container">
-					<div class="row">
-						<section class="4u 12u$(medium) about">
-							<h2>Augue eleifend<br />
-							faucibus et cubilia.</h2>
-							<p>Arcu porttitor ut massa adipiscing nascetur varius lorem ipsum ante ac vestibulum lacinia ante praesent. Iaculis porttitor turpis orci arcu et orci. Lobortis non commodo ante lorem ipsum porttitor turpis orci. Arcu porttitor massa lorem ipsum dolor amet consequat etiam.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Erat vestibulum</a></li>
-							</ul>
-						</section>
-						<section class="4u 6u(medium) 12u$(small)">
-							<h3>Updates</h3>
-							<ul class="updates">
-								<li>
-									<p><a href="#">Ante ac vestibulum lacinia praesent adipiscing nascetur consequat lorem ipsum dolore.</a></p>
-									<span class="timestamp">Posted 2 hours ago</span>
-								</li>
-								<li>
-									<p><a href="#">Mi eu gravida tortor. Commodo lacinia ut ante placerat. In lobortis ac accumsan tortor.</a></p>
-									<span class="timestamp">Posted 4 hours ago</span>
-								</li>
-								<li>
-									<p><a href="#">Erat faucibus lacinia orci vestibulum massa accumsan ac vitae turpis praesent non.</a></p>
-									<span class="timestamp">Posted 8 hours ago</span>
-								</li>
-							</ul>
-						</section>
-						<section class="4u$ 6u$(medium) 12u$(small)">
-							<h3>Get in touch</h3>
-							<ul class="labeled-icons">
-								<li>
-									<h4 class="icon alt fa-home"><span class="label">Address</span></h4>
-									<span>1234 Somewhere Road #80486<br />
-									Nashville, TN 00000</span>
-								</li>
-								<li>
-									<h4 class="icon alt fa-phone"><span class="label">Phone</span></h4>
-									<span>(800) 555-0000 x12345</span>
-								</li>
-								<li>
-									<h4 class="icon alt fa-envelope"><span class="label">Email</span></h4>
-									<a href="#">hello@untitled.tld</a>
-								</li>
-								<li>
-									<h4 class="icon alt fa-facebook"><span class="label">Facebook</span></h4>
-									<a href="#">facebook.com/untitled-tld</a>
-								</li>
-								<li>
-									<h4 class="icon alt fa-twitter"><span class="label">Twitter</span></h4>
-									<a href="#">twitter.com/untitled-tld</a>
-								</li>
-							</ul>
-						</section>
-					</div>
-				</div>
 				<div class="copyright container">
-					<p>&copy; Untitled. All rights reserved.</p>
+					<p>&copy; NerdCollege All rights reserved.</p>
 					<ul class="menu">
 						<li><a href="#">Terms of Use</a></li>
 						<li><a href="#">Privacy Policy</a></li>

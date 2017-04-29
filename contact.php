@@ -49,7 +49,7 @@
 			<div id="main" class="container 75%">
 				<header class="major">
 					<h2>Contact</h2>
-					<p>Leave us a note and us nerds will get in touch with you.</p>
+					<p>Leave a note and us nerds will contact you.</p>
 				</header>
 
 				<!-- Content -->

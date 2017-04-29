@@ -87,10 +87,15 @@
 									<form action="" method="" enctype="multipart/form-data">
 										<input type="file" name="user_photo"><br><br>
 
-										<input type="text" name="username" placeholder="Username" class="form-control"><br>
-										<input type="text" name="email" placeholder="Email" class="form-control"><br>
-										<input type="password" name="password" placeholder="Password" class="form-control"><br>
-										<input type="password" name="confirm_password" placeholder="Confirm Password" class="form-control"><br>	
+
+										<input type="text" name="email" placeholder="Email" class="form-control" value="<?php ?>"><br>
+
+                                        <input type="text" name="school" placeholder="School" class="form-control" value="<?php ?>"><br>
+
+                                        <input type="text" name="major" placeholder="Major" class="form-control" value="<?php ?>"><br>
+
+                                        <input type="text" name="interest" placeholder="Interest" class="form-control" value="<?php ?>"><br>
+
 										<input type="submit" name="submit" value="Update">
 									</form>
 								</div>

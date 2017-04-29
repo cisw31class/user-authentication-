@@ -21,8 +21,8 @@
 				<h1><a href="https://github.com/cisw31class/user-authentication-">Nerds in the cloud</a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="#">Sign Up</a></li>
-						<li><a href="#">Log In</a></li>
+						<li><a href="auth/signup.html">Sign Up</a></li>
+						<li><a href="auth/login.html">Log In</a></li>
 						<li class="special">
 							<a href="#menu" class="icon fa-bars">Menu</a>
 							<div id="menu">
@@ -34,8 +34,8 @@
 									<li>
 										<span>Status</span>
 										<ul>
-											<li><a href="#">Sign Up</a></li>
 											<li><a href="#">Log In</a></li>
+                                            <li><a href="#">Log out</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -50,7 +50,7 @@
 				<div class="inner">
 					<h2>Nerd College</h2>
 					<ul class="actions">
-						<li><a href="#" class="button big special">Sign up!</a></li>
+						<li><a href="auth/signup.html" class="button big special">Sign up!</a></li>
 					</ul>
 					<p class="footnote"><a href="#">Learn more</a></p>
 				</div>
@@ -118,13 +118,13 @@
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of nerdstuff</h3>
+												<h3 class="caption">Pictures of nerdstuff</h3>
 												<img src="images/pic01.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of a really nice comp setup</h3>
+												<h3 class="caption">Picture of a really nice computer setup</h3>
 												<img src="images/pic02.jpg" alt="" />
 											</a>
 										</div>
@@ -157,7 +157,7 @@
 							</div>
 							<div class="4u$ 12u$(medium) important(medium)">
 								<h2>Work hard or hardly work</h2>
-								<p>We have had many obstacles and overcome alot of hardships but the thing that keeps us moving forward is the goal we have set for ourselves yesterday. There is no problem too big when you see yourself as the storm instead of fearing it and hiding from it bla bla bla....the user can click on the "more" button and view more pictures of us putting this project together. By the way, this gives me another idea, we should start taking photos of the group everytime we have class, we will need them in the future. Keep it quiet tho so the other guys dont steal our ideas (they are doing the same project).</p>
+								<p>We have had many obstacles and overcame a lot, but the thing that keeps us moving forward is the goal we have set for ourselves yesterday. There is no problem too big when you see yourself as the storm instead of fearing it and hiding from it bla bla bla....the user can click on the "more" button and view more pictures of us putting this project together. By the way, this gives me an idea, we should start taking photos of the group everytime we have class, we will need them in the future. Keep it quiet tho so the other guys dont steal our ideas (they are doing the same project).</p>
 
 								<p>The goal is to create a website where people can actually browse and choose what they like (and set bookmarks) instead of just an informational site that does nothing. I was thinking that we can put up different discussions about different topics and this will provide a selection platform for our visitors. Again, this functionality will only be available to those who are logged in.</p>
 								<ul class="actions">
@@ -172,7 +172,7 @@
 						<h2>Right this way...</h2>
 						<p>Clicking the "Join now" button will take the visitor to a page where he can create an account. I think the page should be simple, only asking for a name, email and password (and ofcourse confirm password).</p>
 						<ul class="actions">
-							<li><a href="#" class="button big special">Join now!</a></li>
+							<li><a href="auth/signup.html" class="button big special">Join now!</a></li>
 						</ul>
 					</section>
 
