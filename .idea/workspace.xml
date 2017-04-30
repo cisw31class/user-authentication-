@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29586882-0a47-45c9-b199-df32a1484029" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookmark_functions/helper_functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database_functions/check_user.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html_output/auth_header_footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/login.php" afterPath="$PROJECT_DIR$/auth/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth/signup.php" afterPath="$PROJECT_DIR$/auth/signup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_output/footer.php" afterPath="$PROJECT_DIR$/html_output/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_output/header.php" afterPath="$PROJECT_DIR$/html_output/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_output/html_main.php" afterPath="$PROJECT_DIR$/html_output/html_main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_output/login_page.php" afterPath="$PROJECT_DIR$/html_output/login_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_output/nav_bar.php" afterPath="$PROJECT_DIR$/html_output/nav_bar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_output/signup_page.php" afterPath="$PROJECT_DIR$/html_output/signup_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jquery.validate.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/vendor/codacy/coverage" afterPath="$PROJECT_DIR$/database/vendor/codacy/coverage" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup_page.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="signup_page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html_output/signup_page.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
@@ -95,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_auth_fns.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user_auth_fns.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database_functions/user_auth_fns.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
@@ -184,34 +173,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="user-authentication-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user-authentication-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user-authentication-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html_output" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user-authentication-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user-authentication-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database_functions" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -320,13 +281,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26345000" />
+    <option name="totallyTimeSpent" value="26582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="68" width="1195" height="716" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24937238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24937238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -639,21 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database_functions/user_auth_fns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1493591643000" expanded="true" signature="300:349" ph="select * fro... user" />
-            <marker date="1493591643000" expanded="true" signature="607:710" ph="insert into user... " />
-            <marker date="1493591643000" expanded="true" signature="1073:1207" ph="select * fro... user" />
-            <marker date="1493591643000" expanded="true" signature="2144:2279" ph="update user " />
-            <marker date="1493591643000" expanded="true" signature="3974:4109" ph="update user " />
-            <marker date="1493591643000" expanded="true" signature="4431:4512" ph="select email... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auth/signup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -709,6 +654,21 @@
             <marker date="1493592041000" expanded="true" signature="2648:2694" ph="..." />
             <marker date="1493592041000" expanded="true" signature="2807:2820" ph="..." />
             <marker date="1493592041000" expanded="true" signature="2893:3082" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database_functions/user_auth_fns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1493591643000" expanded="true" signature="300:349" ph="select * fro... user" />
+            <marker date="1493591643000" expanded="true" signature="607:710" ph="insert into user... " />
+            <marker date="1493591643000" expanded="true" signature="1073:1207" ph="select * fro... user" />
+            <marker date="1493591643000" expanded="true" signature="2144:2279" ph="update user " />
+            <marker date="1493591643000" expanded="true" signature="3974:4109" ph="update user " />
+            <marker date="1493591643000" expanded="true" signature="4431:4512" ph="select email... user" />
           </folding>
         </state>
       </provider>
