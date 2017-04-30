@@ -55,7 +55,7 @@ function display_footer(){
 					</div>
 				</div>
 				<div class="copyright container">
-					<p>&copy; NerdCollege, All rights reserved.</p>
+					<p>&copy; Nerd Advice, All rights reserved.</p>
 					<ul class="menu">
 						<li><a href="#">Terms of Use</a></li>
 						<li><a href="#">Privacy Policy</a></li>
@@ -63,6 +63,15 @@ function display_footer(){
 					</ul>
 				</div>
 			</footer>
+
+            <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+            <!-- Scripts -->
 EOD;
 echo $footer;
 }

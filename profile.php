@@ -1,27 +1,11 @@
 <!DOCTYPE HTML>
+<?php require_once "html_output/html_main.php"; ?>
 <html>
 	<head>
-		<title>Dynamic Title</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-
-		<!--BOOTSTRAP w/ Jquery CORE-->
-		<script src="bootstrap/jquery-3.2.1.js"></script>
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-		<script src="bootstrap/js/bootstrap.js"></script>
-		<!--BOOTSTRAP w/ Jquery CORE-->
-
-        <?php require_once "html_output/html_main.php"; ?>
-
-		<style>
-			#profile_pic {
-				text-align: center;
-			}
-		</style>
+        <title>Dynamic Title</title>
+        <!--HEADER-->
+        <?php display_header(); ?>
+        <!--HEADER-->
 	</head>
 	<body>
 
@@ -84,15 +68,6 @@
 		<!-- Footer -->
         <?php display_footer(); ?>
         <!-- Footer -->
-
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

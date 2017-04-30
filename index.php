@@ -1,15 +1,11 @@
 <!DOCTYPE HTML>
+<?php require_once "html_output/html_main.php"; ?>
 <html>
 	<head>
-		<title>Nerd College</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-
-        <?php require_once "html_output/html_main.php"; ?>
+		<title>Nerd Advice</title>
+        <!--HEADER-->
+        <?php display_header(); ?>
+        <!--HEADER-->
 	</head>
 	<body>
 
@@ -20,9 +16,9 @@
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<h2>Nerd College</h2>
+					<h2>Nerd Advice</h2>
 					<ul class="actions">
-						<li><a href="auth/signup.html" class="button big special">Sign up!</a></li>
+						<li><a href="auth/signup.php" class="button big special">Sign up!</a></li>
 					</ul>
 					<p class="footnote"><a href="#">Learn more</a></p>
 				</div>
@@ -35,7 +31,7 @@
 				<!-- One -->
 					<section id="one" class="feature major">
 						<span class="icon alt major fa-paper-plane"></span>
-						<h2>Nerd college can help you take over the world!</h2>
+						<h2>Nerd Advice can help you take over the world!</h2>
 
 						<p>Search through different content and bookmark what you like,
                         us nerds will then go to work to and recommend similar content. We have many
@@ -49,9 +45,9 @@
 						<div class="row">
 							<div class="4u 12u$(medium)">
 								<h2>Discussions</h2>
-								<p>We love linux, databases and PHP so thats what we focus on here.
-								When it comes to writing code always write like the guy who maintains
-                                your code is a raging sociopath that knows where you live.</p>
+								<p>When it comes to writing code always write like the guy who maintains
+                                your code is a raging sociopath that knows where you live.
+                                    We love linux, databases and PHP so thats what we focus on here.</p>
 								<ul class="actions">
 									<li><a href="#" class="button">Bookmark</a></li>
 								</ul>
@@ -134,7 +130,7 @@
 							</div>
 							<div class="4u$ 12u$(medium) important(medium)">
 								<h2>Work hard or hardly work</h2>
-								<p>We have had many obstacles and overcame a lot, but the thing that keeps us moving forward is the goal we have set for ourselves yesterday. There is no problem too big when you see yourself as the storm instead of hiding from it. By the way, this gives me an idea, we should start taking photos of the group everytime we have class, we will need them in the future so we can fill in these spots. Keep it quiet tho so the other guys dont steal our ideas (they are doing the same project).</p>
+								<p>We have had many obstacles and overcame a lot, but the thing that keeps us moving forward is the goal we have set for ourselves yesterday. There is no problem too big when you see yourself as the storm instead of hiding from it. By the way, this gives me an idea, we should start taking photos of the group everytime we have class, we will need them in the future so we can fill in these spots.</p>
 
 								<p>The goal is to create a website where people can actually browse and choose what they like (and set bookmarks) instead of just an informational site that does nothing. I was thinking that we can put up different discussions about different topics and this will provide a selection platform for our visitors. Again, this functionality will only be available to those who are logged in.</p>
 								<ul class="actions">
@@ -149,7 +145,7 @@
 						<h2>Right this way...</h2>
 						<p>Clicking the "Join now" button will take the visitor to a page where he can create an account. I think the page should be simple, only asking for a name, email and password (and ofcourse confirm password).</p>
 						<ul class="actions">
-							<li><a href="auth/signup.html" class="button big special">Join now!</a></li>
+							<li><a href="auth/signup.php" class="button big special">Join now!</a></li>
 						</ul>
 					</section>
 
@@ -158,14 +154,6 @@
         <!--Footer-->
 		<?php display_footer(); ?>
         <!--Footer-->
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

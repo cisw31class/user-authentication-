@@ -11,8 +11,8 @@ function display_nav_bar(){
 				<h1><a href="https://github.com/cisw31class/user-authentication-"><!--PLACEHOLDER--></a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="auth/signup.html">Sign Up</a></li>
-						<li><a href="auth/login.html">Log In</a></li>
+						<li><a href="auth/signup.php">Sign Up</a></li>
+						<li><a href="auth/login.php">Log In</a></li>
 						<li class="special">
 							<a href="#menu" class="icon fa-bars">Menu</a>
 							<div id="menu">
@@ -25,8 +25,8 @@ function display_nav_bar(){
 									<li>
 										<span>Status</span>
 										<ul>
-											<li><a href="auth/signup.html">Sign Up</a></li>
-											<li><a href="auth/login.html">Log In</a></li>
+											<li><a href="auth/signup.php">Sign Up</a></li>
+											<li><a href="auth/login.php">Log In</a></li>
 										</ul>
 									</li>
 								</ul>
