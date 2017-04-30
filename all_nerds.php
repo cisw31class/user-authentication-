@@ -14,38 +14,14 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <script src="bootstrap/js/bootstrap.js"></script>
     <!--BOOTSTRAP w/ Jquery CORE-->
+
+    <?php require_once "html_output/html_main.php"; ?>
 </head>
 <body>
 
-<!-- Header -->
-<header id="header">
-    <h1><a href="https://github.com/cisw31class/user-authentication-"><!--PLACEHOLDER--></a></h1>
-    <nav id="nav">
-        <ul>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Log In</a></li>
-            <li class="special">
-                <a href="#menu" class="icon fa-bars">Menu</a>
-                <div id="menu">
-                    <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="profile.php">Profile</a></li>
-                        <li><a href="discussions.php">Discussions</a></li>
-                        <li><a href="#">Classmates</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                        <li>
-                            <span>Status</span>
-                            <ul>
-                                <li><a href="#">Sign Up</a></li>
-                                <li><a href="#">Log In</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</header>
+<!--NAVIGATION-->
+<?php display_nav_bar(); ?>
+<!--NAVIGATION-->
 
 <!-- Main -->
 <div id="main" class="container">
@@ -89,16 +65,9 @@
 </div>
 
 <!-- Footer -->
-<footer id="footer">
-    <div class="copyright container">
-        <p>&copy; NerdCollege All rights reserved.</p>
-        <ul class="menu">
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </div>
-</footer>
+<?php display_footer(); ?>
+<!-- Footer -->
+
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
