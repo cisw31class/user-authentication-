@@ -6,6 +6,7 @@
  * Time: 8:32 PM
  */
 function display_nav_bar(){
+    //This function outputs the HTML for the nav bar
     $navigation= <<<EOD
             <header id="header">
 				<h1><a href="https://github.com/cisw31class/user-authentication-"><!--PLACEHOLDER--></a></h1>

@@ -7,6 +7,7 @@
  */
 
 function display_login(){
+    //This function outputs the login form
     $login= <<<EOD
         <div class="row">
             <div class="col-md-3">

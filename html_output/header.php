@@ -6,6 +6,7 @@
  * Time: 7:38 AM
  */
 function display_header(){
+    //This function outputs the HTML for the header
     $header= <<<EOD
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />

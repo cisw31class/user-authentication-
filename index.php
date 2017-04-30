@@ -18,7 +18,7 @@
 				<div class="inner">
 					<h2>Nerd Advice</h2>
 					<ul class="actions">
-						<li><a href="auth/signup.php" class="button big special">Sign up!</a></li>
+						<li><a href="auth/signup.php" class="button big special">Not a member?</a></li>
 					</ul>
 					<p class="footnote"><a href="#">Learn more</a></p>
 				</div>
