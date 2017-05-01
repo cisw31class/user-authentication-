@@ -1,6 +1,11 @@
 <!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
 <?php require_once "classes/database.php"; ?>
+<?php $database= new Database();
+if(!isset($_SESSION['valid_user'])){
+    $database->redirect('error_page/oops.php?error_message=You need to login first');
+}
+?>
 <html>
 	<head>
         <?php $username= $_SESSION['valid_user']; ?>
@@ -16,7 +21,7 @@
     <!--NAVIGATION-->
 
     <?php
-    $database= new Database();
+
     $result= $database->run_query("SELECT email FROM user WHERE username='$username'");
     while($row= $result->fetch_assoc()){
         $email= $row['email'];

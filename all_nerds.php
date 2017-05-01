@@ -1,6 +1,11 @@
 <!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
 <?php require_once "classes/database.php"; ?>
+<?php $database= new Database();
+if(!isset($_SESSION['valid_user'])){
+    $database->redirect('error_page/oops.php?error_message=You need to login first');
+}
+?>
 <html>
 <head>
     <title>Classmates</title>

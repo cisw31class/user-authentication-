@@ -1,6 +1,10 @@
 <?php
 require_once "html_output/html_main.php";
 require_once "classes/database.php";
+$database= new Database();
+if(!isset($_SESSION['valid_user'])){
+    $database->redirect('error_page/oops.php?error_message=you have not registered an account.');
+}
 /**
  * Created by PhpStorm.
  * User: ocean
@@ -15,7 +19,6 @@ display_header();
 <br><br><br><br>
 
 <?php
-$database= new Database();
 $username= $_SESSION['valid_user'];
 
 $sql="SELECT username, email FROM user WHERE username='$username'";
@@ -24,8 +27,6 @@ $result= $database->run_query($sql);
 while($row= $result->fetch_assoc()){
     $email= $row['email'];
 }
-
-
 ?>
 
 <div class="container">
