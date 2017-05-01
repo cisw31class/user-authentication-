@@ -2,16 +2,17 @@
 ob_start();
   // include function files for this application
   require_once('../bookmark_functions/bookmark_fns.php');
+  $database= new Database();
 
   //create short variable names
-  $email=$_POST['email'];
-  $username=$_POST['username'];
-  $passwd=$_POST['password'];
-  $passwd2=$_POST['conf_password'];
+  $email= $database->escape_string($_POST['email']);
+  $username= $database->escape_string($_POST['name']);
+  $password= $database->escape_string($_POST['password']);
+  //$passwd2=$_POST['conf_password'];
   // start session which may be needed later
   // start it now because it must go before headers
   session_start();
-  try   {
+  //try   {
     // check forms filled in
 
     if (!filled_out($_POST)) {
@@ -41,22 +42,23 @@ ob_start();
 
     // attempt to register
     // this function can also throw an exception
-    register($username, $email, $passwd);
+    register($username, $email, $password);
     // register session variable
     $_SESSION['valid_user'] = $username;
+    $database->redirect('../index.php');
 
     // provide link to members page
-    do_html_header('Registration successful');
-    echo 'Your registration was successful.  Go to the members page to start setting up your bookmarks!';
-    do_html_url('member.php', 'Go to members page');
+    //do_html_header('Registration successful');
+    //echo 'Your registration was successful.  Go to the members page to start setting up your bookmarks!';
+    //do_html_url('member.php', 'Go to members page');
 
    // end page
-   do_html_footer();
-  }
-  catch (Exception $e) {
-     do_html_header('Problem:');
-     echo $e->getMessage();
-     do_html_footer();
-     exit;
-  }
+   //do_html_footer();
+  //}
+  //catch (Exception $e) {
+    // do_html_header('Problem:');
+     //echo $e->getMessage();
+     //do_html_footer();
+     //exit;
+  //}
 ?>

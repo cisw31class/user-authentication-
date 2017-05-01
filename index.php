@@ -17,6 +17,11 @@
 			<section id="banner">
 				<div class="inner">
 					<h2>Nerd Advice</h2>
+                    <?php
+                    if(isset($_SESSION['valid_user'])){
+                        echo "SESSION SET AS ".$_SESSION['valid_user'];
+                    }
+                    ?>
 					<ul class="actions">
 						<li><a href="auth/signup.php" class="button big special">Not a member?</a></li>
 					</ul>

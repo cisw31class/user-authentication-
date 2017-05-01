@@ -19,6 +19,8 @@
 					<h2>Profile</h2>
 				</header>
 
+                <a href="logout/destroy.php" class="btn btn-danger">SESSION DESTROY</a>
+
 				<!-- Content -->
 					<section id="content">
 						<div class="container">

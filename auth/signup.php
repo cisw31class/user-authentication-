@@ -55,6 +55,9 @@
                             success: function(data){
                                 var error= $('#error');
                                 error.html(data);
+                                if(error.text()){
+                                    $('#name').focus();
+                                }
                             }
                         });
                     });
