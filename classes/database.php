@@ -40,9 +40,5 @@ class Database {
         $escaped_string= $this->conn->real_escape_string($string);
         return $escaped_string;
     }
-
-    public function rows_found($search){
-        return $this->conn->num_rows($search);
-    }
 }
 

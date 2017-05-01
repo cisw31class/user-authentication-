@@ -44,6 +44,12 @@ function display_signup(){
                         <h3 id="error2" align="center" style="color: #ff1118;
                                                             background-color: #bff3ff;
                                                             border-radius: 5px;"></h3>
+                        <h3 id="error3" align="center" style="color: #ff1118;
+                                                            background-color: #bff3ff;
+                                                            border-radius: 5px;"></h3>
+                        <h3 id="error4" align="center" style="color: #ff1118;
+                                                            background-color: #bff3ff;
+                                                            border-radius: 5px;"></h3>                                                                        
                         <button type="submit" class="btn" id="submitButton">Sign me up!</button><br><br>
                          <a href="../index.php"><button type="button" class="btn btn-danger">Nevermind</button></a>
                     </form>

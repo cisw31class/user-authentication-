@@ -1,8 +1,10 @@
 <!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
+<?php require_once "classes/database.php"; ?>
 <html>
 	<head>
-        <title>Dynamic Title</title>
+        <?php $username= $_SESSION['valid_user']; ?>
+        <title><?php echo $username; ?></title>
         <!--HEADER-->
         <?php display_header(); ?>
         <!--HEADER-->
@@ -13,20 +15,26 @@
     <?php display_nav_bar(); ?>
     <!--NAVIGATION-->
 
+    <?php
+    $database= new Database();
+    $result= $database->run_query("SELECT email FROM user WHERE username='$username'");
+    while($row= $result->fetch_assoc()){
+        $email= $row['email'];
+    }
+    ?>
+
 		<!-- Main -->
 			<div id="main" class="container">
 				<header class="major">
 					<h2>Profile</h2>
 				</header>
 
-                <a href="logout/destroy.php" class="btn btn-danger">SESSION DESTROY</a>
-
 				<!-- Content -->
 					<section id="content">
 						<div class="container">
 							<div class="row" align="center">
 								<div class="col-md-12">
-									<h3>Welcome... "name of user displayed dynamically"</h3><br><br><br>
+									<h3>Welcome <?php echo $username; ?></h3><br><br><br>
 								</div>	
 							</div>
 
@@ -46,7 +54,7 @@
 										<input type="file" name="user_photo"><br><br>
 
 
-										<input type="text" name="email" placeholder="Email" class="form-control" value="<?php ?>"><br>
+										<input type="text" name="email" placeholder="Email" class="form-control" value="<?php echo $email; ?>"><br>
 
                                         <input type="text" name="school" placeholder="School" class="form-control" value="<?php ?>"><br>
 

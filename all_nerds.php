@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
+<?php require_once "classes/database.php"; ?>
 <html>
 <head>
     <title>Classmates</title>
@@ -14,6 +15,12 @@
     <!--NAVIGATION-->
 
     <!-- Main -->
+    <?php
+    $database= new Database();
+
+    $result= $database->run_query("SELECT * FROM user");
+
+    ?>
     <div id="main" class="container">
         <header class="major">
             <h2>Classmates</h2>
@@ -36,14 +43,16 @@
                         <td>Interest</td>
                         </thead>
 
+                        <?php while($row= $result->fetch_assoc()){ ?>
                         <tbody>
                         <td>25</td>
-                        <td>Annie</td>
-                        <td><a href="mailto:annie@gmail.com">annie@gmail.com</a></td>
+                        <td><?php echo $row['username']; ?></td>
+                        <td><a href="mailto:<?php echo $row['email']; ?>"><?php echo $row['email']; ?></a></td>
                         <td>Mt Sac</td>
                         <td>CIS</td>
                         <td>Guns and Poker</td>
                         </tbody>
+                        <?php } ?>
                     </table>
                 </div>
             </div>
