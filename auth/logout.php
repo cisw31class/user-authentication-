@@ -12,4 +12,4 @@ session_start();
 
 session_destroy();
 
-$database->redirect('../index.php');
+$database->redirect('../til_next_time/goodbye.php');

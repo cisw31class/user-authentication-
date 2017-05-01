@@ -16,16 +16,19 @@
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<h2>Nerd Advice</h2>
+					<h1>Nerd Advice</h1>
                     <?php
                     if(isset($_SESSION['valid_user'])){
-                        echo "SESSION SET AS ".$_SESSION['valid_user'];
+                        echo"<h3>I have and angel on one shoulder and a devil on the other, Im also deaf in one ear.</h3>";
+                        echo"<p class=\"footnote\"><a href=\"profile.php\">go to my Profile</a></p>";
+                    } else {
+                        echo"<ul class=\"actions\">
+						        <li><a href=\"auth/signup.php\" class=\"button big special\">Not a member?</a></li>
+					        </ul>";
                     }
                     ?>
-					<ul class="actions">
-						<li><a href="auth/signup.php" class="button big special">Not a member?</a></li>
-					</ul>
-					<p class="footnote"><a href="#">Learn more</a></p>
+
+
 				</div>
 				<a href="#one" class="more scrolly">Learn more ...</a>
 			</section>
@@ -42,51 +45,56 @@
                         us nerds will then go to work to and recommend similar content. We have many
                         discussions about web technologies that usually catch the attention of
                         others maybe it will catch yours too. We want to help you discover what you
-                        like so come on in and open your free account.</p>
+                        like so come on and open your free account.</p>
 					</section>
 
 				<!-- Two -->
-					<section id="two" class="feature">
-						<div class="row">
-							<div class="4u 12u$(medium)">
+                <?php
+                if(isset($_SESSION['valid_user'])){
+                    echo"<section id=\"two\" class=\"feature\">
+						<div class=\"row\">
+							<div class=\"4u 12u$(medium)\">
 								<h2>Discussions</h2>
 								<p>When it comes to writing code always write like the guy who maintains
                                 your code is a raging sociopath that knows where you live.
                                     We love linux, databases and PHP so thats what we focus on here.</p>
-								<ul class="actions">
-									<li><a href="#" class="button">Bookmark</a></li>
+								<ul class=\"actions\">
+									<li><a href=\"#\" class=\"button\">Bookmark</a></li>
 								</ul>
 							</div>
-							<div class="8u$ 12u$(medium)">
-								<ul class="major-icons row">
-									<li class="4u 6u(small) 12u$(xsmall)">
-										<span class="icon alt major fa-server"></span>
+							<div class=\"8u$ 12u$(medium)\">
+								<ul class=\"major-icons row\">
+									<li class=\"4u 6u(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-server\"></span>
 										<p>Servers</p>
 									</li>
-									<li class="4u 6u$(small) 12u$(xsmall)">
-										<span class="icon alt major fa-linux"></span>
+									<li class=\"4u 6u$(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-linux\"></span>
 										<p>Linux</p>
 									</li>
-									<li class="4u$ 6u(small) 12u$(xsmall)">
-										<span class="icon alt major fa-github"></span>
+									<li class=\"4u$ 6u(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-github\"></span>
 										<p>Github</p>
 									</li>
-									<li class="4u 6u$(small) 12u$(xsmall)">
-										<span class="icon alt major fa-code"></span>
+									<li class=\"4u 6u$(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-code\"></span>
 										<p>HTML</p>
 									</li>
-									<li class="4u 6u(small) 12u$(xsmall)">
-										<span class="icon alt major fa-database"></span>
+									<li class=\"4u 6u(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-database\"></span>
 										<p>Databases</p>
 									</li>
-									<li class="4u$ 6u$(small) 12u$(xsmall)">
-										<span class="icon alt major fa-bolt"></span>
+									<li class=\"4u$ 6u$(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-bolt\"></span>
 										<p>PHP</p>
 									</li>
 								</ul>
 							</div>
 						</div>
-					</section>
+					</section>";
+                }
+                ?>
+
 
 				<!-- Three -->
 					<section id="three" class="feature">
@@ -139,21 +147,30 @@
 
 								<p>The goal is to create a website where people can actually browse and choose what they like (and set bookmarks) instead of just an informational site that does nothing. I was thinking that we can put up different discussions about different topics and this will provide a selection platform for our visitors. Again, this functionality will only be available to those who are logged in.</p>
 								<ul class="actions">
-									<li><a href="#" class="button">Bookmark</a></li>
+                                    <?php
+                                    if(isset($_SESSION['valid_user'])){
+                                        echo"<li><a href=\"#\" class=\"button\">Bookmark</a></li>";
+                                    } else {
+                                        echo"<li><a href=\"auth/login.php\" class=\"button\">Login</a></li>";
+                                    }
+                                    ?>
 								</ul>
 							</div>
 						</div>
 					</section>
 
 				<!-- Four -->
-					<section id="four" class="feature major">
+                <?php
+                if(!isset($_SESSION['valid_user'])){
+                    echo"<section id=\"four\" class=\"feature major\">
 						<h2>Right this way...</h2>
-						<p>Clicking the "Join now" button will take the visitor to a page where he can create an account. I think the page should be simple, only asking for a name, email and password (and ofcourse confirm password).</p>
-						<ul class="actions">
-							<li><a href="auth/signup.php" class="button big special">Join now!</a></li>
+						<p>Clicking the \"Join now\" button will take the visitor to a page where he can create an account. I think the page should be simple, only asking for a name, email and password (and ofcourse confirm password).</p>
+						<ul class=\"actions\">
+							<li><a href=\"auth/signup.php\" class=\"button big special\">Join now!</a></li>
 						</ul>
-					</section>
-
+					</section>";
+                }
+                ?>
 			</div>
 
         <!--Footer-->

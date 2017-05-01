@@ -2,49 +2,6 @@
 
 require_once('../classes/database.php');
 
-
-
-
-    function register($username, $email, $password){
-        $database = new Database();
-
-    // if ok, put in db
-    $result = $database->run_query("insert into user values
-                         ('".$username."', sha1('".$password."'), '".$email."')");
-        if (!$result) {
-            throw new Exception('Could not register you in database - please try again later.');
-        }
-        return true;
-    }
-
-
-
-
-
-
-    function login($username, $password){
-// check username and password with db
-// if yes, return true
-// else throw exception
-
-        // connect to db
-        $conn = db_connect();
-
-        // check if username is unique
-        $result = $conn->query("select * from user
-                         where username='" . $username . "'
-                         and passwd = sha1('" . $password . "')");
-        if (!$result) {
-            throw new Exception('Could not log you in.');
-        }
-
-        if ($result->num_rows > 0) {
-            return true;
-        } else {
-            throw new Exception('Could not log you in.');
-        }
-    }
-
     function check_valid_user(){
 // see if somebody is logged in and notify them if not
         if (isset($_SESSION['valid_user'])) {
