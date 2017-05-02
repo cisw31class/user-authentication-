@@ -13,6 +13,7 @@ $username= $_SESSION['valid_user'];
 $school=$database->escape_string($_POST['school']);
 $major=$database->escape_string($_POST['major']);
 $interest=$database->escape_string($_POST['interest']);
+$current_photo=$database->escape_string($_POST['current_photo']);
 
 $user_photo= $_FILES['user_photo'];
 $tmp_photo_name= $user_photo['tmp_name'];
@@ -25,6 +26,7 @@ if($user_photo['size'] != 0){
     $photo_sql="UPDATE user SET school='$school', major='$major', interest='$interest', image_path='$db_path' WHERE username='$username'";
     if($database->run_query($photo_sql)){
         move_uploaded_file($tmp_photo_name, $target_file);
+        unlink('../'. $current_photo);
         Database::set_message("<h4 class='alert alert-info text-center'>Your profile has been updated successfully</h4>");
         $database->redirect("../profile.php");
     } else {

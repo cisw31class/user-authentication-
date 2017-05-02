@@ -70,6 +70,7 @@ if(!isset($_SESSION['valid_user'])){
                                         <input type="text" name="major" placeholder="Major" class="form-control" value="<?php echo $major; ?>"><br>
 
                                         <input type="text" name="interest" placeholder="Interest" class="form-control" value="<?php echo $interest; ?>"><br>
+                                        <input type="hidden" name="current_photo" value="<?php echo $image_path; ?>">
 
 										<input type="submit" name="submit" value="Update">
 									</form>
