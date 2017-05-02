@@ -21,10 +21,18 @@ if(!isset($_SESSION['valid_user'])){
     <!--NAVIGATION-->
 
     <?php
-
-    $result= $database->run_query("SELECT email FROM user WHERE username='$username'");
+    $result= $database->run_query("SELECT * FROM user WHERE username='$username'");
     while($row= $result->fetch_assoc()){
         $email= $row['email'];
+        $school= $row['school'];
+        $major= $row['major'];
+        $interest= $row['interest'];
+        $photo_id= $row['photo_id'];
+    }
+
+    $result= $database->run_query("SELECT photo_path FROM photos WHERE photo_id='$photo_id'");
+    while($row= $result->fetch_assoc()){
+        $photo_path= $row['photo_path'];
     }
     ?>
 
@@ -33,7 +41,7 @@ if(!isset($_SESSION['valid_user'])){
 				<header class="major">
 					<h2>Profile</h2>
 				</header>
-
+                <?php Database::display_message(); ?>
 				<!-- Content -->
 					<section id="content">
 						<div class="container">
@@ -50,22 +58,22 @@ if(!isset($_SESSION['valid_user'])){
 
 								<div class="col-md-4">
 									<div id="profile_pic">
-										<img src="images/avatar.png" class="img-circle" height="200" width="200">
+										<img src="<?php echo $photo_path; ?>" class="img-circle" height="200" width="200">
 									</div>
 
 									<br><br>
 
-									<form action="" method="" enctype="multipart/form-data">
+									<form action="update_profile/update.php" method="POST" enctype="multipart/form-data">
 										<input type="file" name="user_photo"><br><br>
 
 
 										<input type="text" name="email" placeholder="Email" class="form-control" value="<?php echo $email; ?>"><br>
 
-                                        <input type="text" name="school" placeholder="School" class="form-control" value="<?php ?>"><br>
+                                        <input type="text" name="school" placeholder="School" class="form-control" value="<?php echo $school; ?>"><br>
 
-                                        <input type="text" name="major" placeholder="Major" class="form-control" value="<?php ?>"><br>
+                                        <input type="text" name="major" placeholder="Major" class="form-control" value="<?php echo $major; ?>"><br>
 
-                                        <input type="text" name="interest" placeholder="Interest" class="form-control" value="<?php ?>"><br>
+                                        <input type="text" name="interest" placeholder="Interest" class="form-control" value="<?php echo $interest; ?>"><br>
 
 										<input type="submit" name="submit" value="Update">
 									</form>

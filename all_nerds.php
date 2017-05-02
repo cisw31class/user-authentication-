@@ -50,12 +50,12 @@ if(!isset($_SESSION['valid_user'])){
 
                         <?php while($row= $result->fetch_assoc()){ ?>
                         <tbody>
-                        <td>25</td>
+                        <td>34</td>
                         <td><?php echo $row['username']; ?></td>
                         <td><a href="mailto:<?php echo $row['email']; ?>"><?php echo $row['email']; ?></a></td>
-                        <td>Mt Sac</td>
-                        <td>CIS</td>
-                        <td>Guns and Poker</td>
+                        <td><?php echo $row['school']; ?></td>
+                        <td><?php echo $row['major']; ?></td>
+                        <td><?php echo $row['interest'];?></td>
                         </tbody>
                         <?php } ?>
                     </table>

@@ -86,5 +86,10 @@ class Database {
             unset($_SESSION['message']);
         }
     }
+
+    //This function requires the connection to work right
+    public function auto_id(){
+        return mysqli_insert_id($this->conn);
+    }
 }
 
