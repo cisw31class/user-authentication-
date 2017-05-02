@@ -58,7 +58,7 @@ if(!isset($_SESSION['valid_user'])){
 
 								<div class="col-md-4">
 									<div id="profile_pic">
-										<img src="<?php echo $photo_path; ?>" class="img-circle" height="200" width="200">
+										<img src="<?php echo $photo_path ? $photo_path : 'PLACEHOLDERS/avatar.JPG';  ?>" class="img-circle" height="200" width="200">
 									</div>
 
 									<br><br>

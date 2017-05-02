@@ -40,22 +40,22 @@ if(!isset($_SESSION['valid_user'])){
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
-                        <td>ID</td>
                         <td>Name</td>
                         <td>Email</td>
                         <td>School</td>
                         <td>Major</td>
                         <td>Interest</td>
+                        <td>Photo</td>
                         </thead>
 
                         <?php while($row= $result->fetch_assoc()){ ?>
                         <tbody>
-                        <td>34</td>
                         <td><?php echo $row['username']; ?></td>
                         <td><a href="mailto:<?php echo $row['email']; ?>"><?php echo $row['email']; ?></a></td>
                         <td><?php echo $row['school']; ?></td>
                         <td><?php echo $row['major']; ?></td>
                         <td><?php echo $row['interest'];?></td>
+                        <td><img src="<?php  ?>" height="80" width="80" class="img-circle"></td>
                         </tbody>
                         <?php } ?>
                     </table>
