@@ -27,13 +27,9 @@ if(!isset($_SESSION['valid_user'])){
         $school= $row['school'];
         $major= $row['major'];
         $interest= $row['interest'];
-        $photo_id= $row['photo_id'];
+        $image_path= $row['image_path'];
     }
 
-    $result= $database->run_query("SELECT photo_path FROM photos WHERE photo_id='$photo_id'");
-    while($row= $result->fetch_assoc()){
-        $photo_path= $row['photo_path'];
-    }
     ?>
 
 		<!-- Main -->
@@ -58,7 +54,7 @@ if(!isset($_SESSION['valid_user'])){
 
 								<div class="col-md-4">
 									<div id="profile_pic">
-										<img src="<?php echo $photo_path ? $photo_path : 'PLACEHOLDERS/avatar.JPG';  ?>" class="img-circle" height="200" width="200">
+										<img src="<?php echo $image_path ? $image_path : 'PLACEHOLDERS/avatar.JPG'; ?>" class="img-circle" height="200" width="200">
 									</div>
 
 									<br><br>

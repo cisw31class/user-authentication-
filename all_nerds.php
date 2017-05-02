@@ -55,7 +55,7 @@ if(!isset($_SESSION['valid_user'])){
                         <td><?php echo $row['school']; ?></td>
                         <td><?php echo $row['major']; ?></td>
                         <td><?php echo $row['interest'];?></td>
-                        <td><img src="<?php  ?>" height="80" width="80" class="img-circle"></td>
+                        <td><img src="<?php echo $row['image_path'] ? $row['image_path'] : 'PLACEHOLDERS/avatar.JPG'; ?>" height="80" width="80" class="img-circle"></td>
                         </tbody>
                         <?php } ?>
                     </table>
