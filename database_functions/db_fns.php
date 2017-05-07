@@ -9,4 +9,18 @@ function db_connect() {
    }
 }
 
+function redirect($location){
+    return header("Location: ".$location);
+}
+
+function set_message($msg){
+    $_SESSION['message']= $msg;
+}
+
+function display_message(){
+    if(isset($_SESSION['message'])){
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+    }
+}
 ?>

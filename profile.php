@@ -1,17 +1,22 @@
 <?php require_once "html_output/html_main.php"; ?>
-<?php require_once "bookmark_functions/bookmark_fns.php"; ?>
+<?php require_once "classes/database.php"; ?>
+<?php require_once "database_functions/db_fns.php"; ?>
 <!DOCTYPE HTML>
-<?php session_start(); ?>
+<?php
+session_start();
+$username= $_SESSION['valid_user'];
+?>
 <html>
 	<head>
-        <title>Dynamic Title</title>
+        <title><?php echo $username; ?></title>
         <!--HEADER-->
         <?php display_header(); ?>
         <!--HEADER-->
         <?php
+        $database= new Database();
 
-        $sql="SELECT email FROM user WHERE username=".$_SESSION['valid_user'];
-
+        $sql="SELECT email FROM user WHERE username='$username'";
+        $result=$database->run_query($sql);
         ?>
 	</head>
 	<body>
@@ -31,7 +36,7 @@
 						<div class="container">
 							<div class="row" align="center">
 								<div class="col-md-12">
-									<h3>Welcome <?php echo $_SESSION['valid_user']; ?></h3><br><br><br>
+									<h3>Welcome <?php echo $username; ?></h3><br><br><br>
 								</div>	
 							</div>
 
@@ -41,15 +46,20 @@
 								</div>
 
 								<div class="col-md-4">
+                                    <?php display_message(); ?>
 									<div id="profile_pic">
 										<img src="images/avatar.png" class="img-circle" height="200" width="200">
 									</div>
 
 									<br><br>
 
-									<form action="" method="">
-
-										<input type="text" name="email" placeholder="Email" class="form-control" value="<?php ?>"><br>
+									<form action="update_profile/update.php" method="POST">
+                                        <?php
+                                        while($row= $result->fetch_object()){
+                                            $email= $row->email;
+                                        }
+                                        ?>
+										<input type="text" name="email" placeholder="Email" class="form-control" value="<?php echo $email; ?>"><br>
 
 										<input type="submit" name="submit" value="Update">
 									</form>

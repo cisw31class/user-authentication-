@@ -6,5 +6,4 @@
   require_once('../database_functions/user_auth_fns.php');
   require_once('../database_functions/output_fns.php');
   require_once('../database_functions/url_fns.php');
-  require_once('helper_functions.php');
 ?>
