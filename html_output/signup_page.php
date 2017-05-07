@@ -59,16 +59,3 @@ function display_signup(){
 EOD;
 echo $signup;
 }
-
-function display_test_form(){
-    $test_form= <<<EOD
-    <p id="error" style="color: white;"></p><br>
-
-    <form action="../new_user/register_new.php" method="POST">
-        <input type="text" name="username" id="username"><br><br>
-        <input type="text" name="password" id="password"><br><br>
-        <input type="submit" value="submit">
-    </form>
-EOD;
-echo $test_form;
-}

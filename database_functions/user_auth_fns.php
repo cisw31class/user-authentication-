@@ -9,16 +9,15 @@ function register($username, $email, $password) {
   // connect to db
   $conn = db_connect();
 
-  //WE ARE DOING THIS CLIENT SIDE USING AJAX
   // check if username is unique
-//  $result = $conn->query("select * from user where username='".$username."'");
-//  if (!$result) {
-//    throw new Exception('Could not execute query');
-//  }
+  $result = $conn->query("select * from user where username='".$username."'");
+  if (!$result) {
+    throw new Exception('Could not execute query');
+  }
 
-//  if ($result->num_rows>0) {
-//    throw new Exception('That username is taken - go back and choose another one.');
-//  }
+  if ($result->num_rows>0) {
+    throw new Exception('That username is taken - go back and choose another one.');
+  }
 
   // if ok, put in db
   $result = $conn->query("insert into user values
