@@ -1,11 +1,18 @@
-<!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
+<?php require_once "bookmark_functions/bookmark_fns.php"; ?>
+<!DOCTYPE HTML>
+<?php session_start(); ?>
 <html>
 	<head>
         <title>Dynamic Title</title>
         <!--HEADER-->
         <?php display_header(); ?>
         <!--HEADER-->
+        <?php
+
+        $sql="SELECT email FROM user WHERE username=".$_SESSION['valid_user'];
+
+        ?>
 	</head>
 	<body>
 
@@ -24,7 +31,7 @@
 						<div class="container">
 							<div class="row" align="center">
 								<div class="col-md-12">
-									<h3>Welcome... "name of user displayed dynamically"</h3><br><br><br>
+									<h3>Welcome <?php echo $_SESSION['valid_user']; ?></h3><br><br><br>
 								</div>	
 							</div>
 
@@ -40,17 +47,9 @@
 
 									<br><br>
 
-									<form action="" method="" enctype="multipart/form-data">
-										<input type="file" name="user_photo"><br><br>
-
+									<form action="" method="">
 
 										<input type="text" name="email" placeholder="Email" class="form-control" value="<?php ?>"><br>
-
-                                        <input type="text" name="school" placeholder="School" class="form-control" value="<?php ?>"><br>
-
-                                        <input type="text" name="major" placeholder="Major" class="form-control" value="<?php ?>"><br>
-
-                                        <input type="text" name="interest" placeholder="Interest" class="form-control" value="<?php ?>"><br>
 
 										<input type="submit" name="submit" value="Update">
 									</form>

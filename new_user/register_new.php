@@ -44,6 +44,7 @@ ob_start();
     // provide link to members page NOT SURE IF WE SHOULD USE THIS OR NOT WHAT DO YOU GUYS THINK?
 //    do_html_header('Registration successful');
     echo 'Your registration was successful.  Go to the members page to start setting up your bookmarks!';
+    header("Location: ../index.php");
 
       //NOT SURE IF WE SHOULD USE THIS OR NOT WHAT DO YOU GUYS THINK?
 //    do_html_url('member.php', 'Go to members page');

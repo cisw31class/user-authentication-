@@ -1,5 +1,6 @@
-<!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
+<!DOCTYPE HTML>
+<?php session_start(); ?>
 <html>
 	<head>
 		<title>Nerd Advice</title>
@@ -18,12 +19,18 @@
 				<div class="inner">
 					<h2>Nerd Advice</h2>
 					<ul class="actions">
-						<li><a href="auth/signup.php" class="button big special">Not a member?</a></li>
+                        <?php if(isset($_SESSION['valid_user'])){
+                            echo "<li><a href=\"profile.php\" class=\"button big special\">My Account</a></li>";
+                        } else {
+                            echo"<li><a href=\"auth/signup.php\" class=\"button big special\">Not a member?</a></li>";
+                        }
+                        ?>
 					</ul>
 					<p class="footnote"><a href="#">Learn more</a></p>
 				</div>
 				<a href="#one" class="more scrolly">Learn more ...</a>
 			</section>
+
 
 		<!-- Main -->
 			<div id="main" class="container">
