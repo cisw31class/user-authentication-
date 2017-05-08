@@ -35,7 +35,8 @@
 <div id="main" class="container 75%">
     <header class="major">
         <h2>Oops...seems there has been an error</h2>
-        <p>The task failed successfully because...<?php echo $_GET['error_message']; ?></p>
+        <p>The task failed successfully because...<br>
+            <?php echo $_GET['error_message']; ?></p>
         <br>
         <img src="../images/mistake.jpg" height="300" width="500">
     </header>

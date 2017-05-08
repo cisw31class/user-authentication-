@@ -1,8 +1,9 @@
-<!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
+<!DOCTYPE HTML>
+<?php require_once "classes/database.php"; ?>
 <html>
 	<head>
-		<title>Contact</title>
+		<title>Reset Password</title>
         <!--HEADER-->
         <?php display_header(); ?>
         <!--HEADER-->
@@ -16,7 +17,7 @@
 		<!-- Main -->
 			<div id="main" class="container 75%">
 				<header class="major">
-					<h2>Contact</h2>
+					<h2>Reset Password</h2>
 					<p>Leave a note and us nerds will contact you.</p>
 				</header>
 

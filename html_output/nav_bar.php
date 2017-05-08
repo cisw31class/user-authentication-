@@ -21,20 +21,18 @@ function display_nav_bar(){
                     echo"<li class='special'>
 							<a href='#menu' class='icon fa-bars'>Menu</a>
 							<div id='menu'>
-								<ul>
-									<li><a href='index.php'>Home</a></li>
-									<li><a href='profile.php'>Profile</a></li>
-									<li><a href='discussions.php'>Discussions</a></li>
-                                    <li><a href='all_nerds.php'>Classmates</a></li>
-									<li><a href='contact.php'>Contact</a></li>
-									<li>
-										<span>Status</span>
-										<ul>
-											<li><a href='auth/signup.php'>Sign Up</a></li>
-											<li><a href='auth/login.php'>Log In</a></li>
-										</ul>
-									</li>
-								</ul>
+								<ul>";
+                                    if(isset($_SESSION['valid_user'])){
+                                        echo"<li><a href='index.php'>Home</a></li>
+                                            <li><a href='profile.php'>Profile</a></li>
+                                            <li><a href='discussions.php'>Discussions</a></li>
+                                            <li><a href='all_nerds.php'>Classmates</a></li>
+                                            <li><a href='reset_password.php'>Reset Password</a></li>";
+                                    } else {
+                                        echo"<li><a href='index.php'>Home</a></li>
+                                             <li><a href='reset_password.php'>Reset Password</a></li>";
+                                    }
+                            echo"</ul>
 							</div>
 						</li>
 					</ul>

@@ -55,7 +55,8 @@ ob_start();
   catch (Exception $e) {
     //NOT SURE IF WE SHOULD USE THIS OR NOT WHAT DO YOU GUYS THINK?
 //     do_html_header('Problem:');
-     echo $e->getMessage();
+      $msg= $e->getMessage();
+      redirect("../error_page/error.php?error_message=$msg");
      //NOT SURE IF WE SHOULD USE THIS OR NOT WHAT DO YOU GUYS THINK?
 //     do_html_footer();
      exit;

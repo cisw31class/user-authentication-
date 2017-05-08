@@ -1,5 +1,10 @@
 <!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
+<?php
+if(!isset($_SESSION['valid_user'])){
+    header("Location: error_page/error.php?error_message=You are not authorized to be here!");
+}
+?>
 <html>
 <head>
     <title>Classmates</title>
@@ -8,7 +13,6 @@
     <!--HEADER-->
 </head>
     <body>
-
     <!--NAVIGATION-->
     <?php display_nav_bar(); ?>
     <!--NAVIGATION-->
@@ -28,21 +32,21 @@
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
-                        <td>ID</td>
-                        <td>Name</td>
-                        <td>Email</td>
-                        <td>School</td>
-                        <td>Major</td>
-                        <td>Interest</td>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>Email</td>
+                            <td>School</td>
+                            <td>Major</td>
+                            <td>Interest</td>
                         </thead>
 
                         <tbody>
-                        <td>25</td>
-                        <td>Annie</td>
-                        <td><a href="mailto:annie@gmail.com">annie@gmail.com</a></td>
-                        <td>Mt Sac</td>
-                        <td>CIS</td>
-                        <td>Guns and Poker</td>
+                            <td>25</td>
+                            <td>Annie</td>
+                            <td><a href="mailto:annie@gmail.com">annie@gmail.com</a></td>
+                            <td>Mt Sac</td>
+                            <td>CIS</td>
+                            <td>Guns and Poker</td>
                         </tbody>
                     </table>
                 </div>

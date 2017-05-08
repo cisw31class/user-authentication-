@@ -48,7 +48,7 @@ function login($username, $password) {
   if ($result->num_rows>0) {
      return true;
   } else {
-     throw new Exception('Could not log you in.');
+     throw new Exception('Could not log you in. Invalid credentials');
   }
 }
 
