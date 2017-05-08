@@ -9,8 +9,15 @@ function db_connect() {
    }
 }
 
+$con= db_connect();
+
 function redirect($location){
     return header("Location: ".$location);
+}
+
+function escape_string($sql){
+    global $con;
+    return $con->real_escape_string($sql);
 }
 
 function set_message($msg){

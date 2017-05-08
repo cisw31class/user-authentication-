@@ -11,7 +11,7 @@ require_once "../bookmark_functions/bookmark_fns.php";
  */
 try{
     if(!filled_out($_POST)){
-        throw new Exception("Missing password or username...cannot proceed");
+        throw new Exception("Missing password or username and cannot proceed");
     }
 }
 catch(Exception $f){
@@ -19,11 +19,17 @@ catch(Exception $f){
     redirect("../error_page/error.php?error_message=$msg");
     exit;
 }
-$username= $_POST['name'];
+$username= escape_string($_POST['name']);
 $password= $_POST['password'];
 
 
 
-login($username, $password);
+try{
+
+}
+catch(Exception $f){
+    $msg= $f->getMessage();
+    redirect("../error_page/error.php?");
+}
 $_SESSION['valid_user']= $username;
 redirect("../profile.php");
