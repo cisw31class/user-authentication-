@@ -36,7 +36,7 @@ session_start();
       // attempt update
       change_password($_SESSION['valid_user'], $old_passwd, $new_passwd);
       echo 'Password changed.';
-      set_message("<h3 class='alert alert-success'>Your password has been updated</h3>");
+      set_message("<h3 class='alert alert-success text-center'>Password has been updated</h3>");
       redirect("../profile.php");
   }
   catch (Exception $e) {

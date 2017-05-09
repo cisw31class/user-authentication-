@@ -22,7 +22,7 @@
 				</header>
 
                 <div class="container">
-                    <form action="change_pass_data/change_pass_data.php" method="POST">
+                    <form action="reset_pass/forgot_passwd.php" method="POST">
                         <div class="row">
                             <div class="col-md-4">
                                 <!--PLACEHOLDER-->
@@ -30,37 +30,7 @@
 
                             <div class="col-md-4">
                                 <label>Username</label><br>
-                                <input type="password" name="old_passwd">
-                            </div>
-
-                            <div class="col-md-4">
-                                <!--PLACEHOLDER-->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <!--PLACEHOLDER-->
-                            </div>
-
-                            <div class="col-md-4">
-                                <label>New Password</label><br>
-                                <input type="password" name="new_passwd">
-                            </div>
-
-                            <div class="col-md-4">
-                                <!--PLACEHOLDER-->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <!--PLACEHOLDER-->
-                            </div>
-
-                            <div class="col-md-4">
-                                <label>Repeat New Password</label><br>
-                                <input type="password" name="new_passwd2"><br>
+                                <input type="text" name="username"><br>
                             </div>
 
                             <div class="col-md-4">
