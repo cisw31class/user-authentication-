@@ -1,5 +1,7 @@
-<!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
+<?php require_once "database_functions/db_fns.php"; ?>
+<?php session_start(); ?>
+<!DOCTYPE HTML>
 <?php
 if(!isset($_SESSION['valid_user'])){
     header("Location: error_page/error.php?error_message=You are not authorized to be here!");
@@ -11,6 +13,12 @@ if(!isset($_SESSION['valid_user'])){
     <!--HEADER-->
     <?php display_header(); ?>
     <!--HEADER-->
+    <?php
+    $username= $_SESSION['valid_user'];
+    $con= db_connect();
+    $sql="SELECT * FROM user WHERE username='$username'";
+    $result= $con->query($sql);
+    ?>
 </head>
     <body>
     <!--NAVIGATION-->
@@ -31,23 +39,17 @@ if(!isset($_SESSION['valid_user'])){
             <div class="col-md-8">
                 <div class="table-responsive">
                     <table class="table">
-                        <thead>
-                            <td>ID</td>
+                        <tr>
                             <td>Name</td>
                             <td>Email</td>
-                            <td>School</td>
-                            <td>Major</td>
-                            <td>Interest</td>
-                        </thead>
-
-                        <tbody>
-                            <td>25</td>
-                            <td>Annie</td>
-                            <td><a href="mailto:annie@gmail.com">annie@gmail.com</a></td>
-                            <td>Mt Sac</td>
-                            <td>CIS</td>
-                            <td>Guns and Poker</td>
-                        </tbody>
+                        </tr>
+                        <?php
+                        while($row= $result->fetch_object()){ ?>
+                        <tr>
+                            <td><?php echo $row->username; ?></td>
+                            <td><a href="mailto:<?php echo $row->email; ?>"><?php echo $row->email; ?></a></td>
+                        <tr>
+                        <?php } ?>
                     </table>
                 </div>
             </div>
