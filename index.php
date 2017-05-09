@@ -27,9 +27,7 @@
                         }
                         ?>
 					</ul>
-					<p class="footnote"><a href="#">Learn more</a></p>
 				</div>
-				<a href="#one" class="more scrolly">Learn more ...</a>
 			</section>
 
 

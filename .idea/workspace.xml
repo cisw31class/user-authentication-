@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="29586882-0a47-45c9-b199-df32a1484029" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/vendor/codacy/coverage" afterPath="$PROJECT_DIR$/database/vendor/codacy/coverage" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/change_pass_data/change_pass_data.php" afterPath="$PROJECT_DIR$/change_pass_data/change_pass_data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/change_password.php" afterPath="$PROJECT_DIR$/change_password.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_output/footer.php" afterPath="$PROJECT_DIR$/html_output/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_output/html_main.php" afterPath="$PROJECT_DIR$/html_output/html_main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html_output/nav_bar.php" afterPath="$PROJECT_DIR$/html_output/nav_bar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reset_password.php" afterPath="$PROJECT_DIR$/reset_password.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,83 +16,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+            <state relative-caret-position="274">
+              <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
               <folding>
-                <marker date="1494344944000" expanded="true" signature="2333:2476" ph="..." />
-                <marker date="1494344944000" expanded="true" signature="6187:6330" ph="..." />
+                <marker date="1494345817000" expanded="true" signature="2218:2361" ph="..." />
+                <marker date="1494345817000" expanded="true" signature="6072:6215" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html_output/footer.php">
+      <file leaf-file-name="reset_password.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reset_password.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-              <folding>
-                <marker date="1494345369000" expanded="true" signature="199:219" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="199:229" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="199:2461" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="199:2782" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="231:255" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="231:2441" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="261:293" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="261:315" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="261:831" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="261:1537" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="261:2426" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="317:507" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="317:755" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="317:782" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="384:507" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="615:730" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="859:927" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="859:935" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="859:1488" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="937:1461" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="966:1006" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="966:1008" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="966:1124" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="966:1134" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="966:1191" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1220:1260" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1220:1368" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1220:1378" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1220:1435" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1567:1640" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1567:1654" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1567:2407" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1656:2380" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1685:1724" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1685:1741" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1685:1755" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1685:1761" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1685:1921" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1817:1891" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1950:1989" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="1950:2132" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2161:2200" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2161:2221" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2161:2235" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2161:2241" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2161:2297" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2161:2354" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2483:2566" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2483:2571" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2483:2768" ph="..." />
-                <marker date="1494345369000" expanded="false" signature="2500:2506" ph="©" />
-                <marker date="1494345369000" expanded="true" signature="2573:2602" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2573:2604" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2573:2656" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2573:2712" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2573:2714" ph="..." />
-                <marker date="1494345369000" expanded="true" signature="2573:2753" ph="..." />
-              </folding>
+            <state relative-caret-position="243">
+              <caret line="76" column="79" lean-forward="false" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,18 +42,8 @@
       <file leaf-file-name="change_password.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/change_password.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="html_main.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html_output/html_main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="1062">
+              <caret line="88" column="32" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="88" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -159,8 +86,9 @@
         <option value="$PROJECT_DIR$/change_pass_data/change_pass_data.php" />
         <option value="$PROJECT_DIR$/change_password.php" />
         <option value="$PROJECT_DIR$/html_output/nav_bar.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/html_output/footer.php" />
+        <option value="$PROJECT_DIR$/reset_password.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -205,20 +133,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="user-authentication-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user-authentication-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user-authentication-" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html_output" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,12 +251,12 @@
       <workItem from="1494210887101" duration="51000" />
       <workItem from="1494218872988" duration="155000" />
       <workItem from="1494258346186" duration="4456000" />
-      <workItem from="1494336476746" duration="2826000" />
+      <workItem from="1494336476746" duration="3161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45221000" />
+    <option name="totallyTimeSpent" value="45556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="75" y="23" width="1195" height="714" extended-state="0" />
@@ -483,8 +397,8 @@
         <state relative-caret-position="2485">
           <caret line="174" column="0" lean-forward="true" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
           <folding>
-            <marker date="1494344944000" expanded="true" signature="2333:2476" ph="..." />
-            <marker date="1494344944000" expanded="true" signature="6187:6330" ph="..." />
+            <marker date="1494345817000" expanded="true" signature="2218:2361" ph="..." />
+            <marker date="1494345817000" expanded="true" signature="6072:6215" ph="..." />
           </folding>
         </state>
       </provider>
@@ -672,14 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reset_password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookmark_functions/bookmark_fns.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -704,14 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/change_password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html_output/html_main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -729,17 +627,6 @@
             <marker date="1494342878000" expanded="true" signature="321:331" ph="..." />
             <marker date="1494342878000" expanded="true" signature="720:809" ph="..." />
             <marker date="1494342878000" expanded="true" signature="796:809" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
-          <folding>
-            <marker date="1494344944000" expanded="true" signature="2333:2476" ph="..." />
-            <marker date="1494344944000" expanded="true" signature="6187:6330" ph="..." />
           </folding>
         </state>
       </provider>
@@ -806,6 +693,33 @@
             <marker date="1494345369000" expanded="true" signature="2573:2712" ph="..." />
             <marker date="1494345369000" expanded="true" signature="2573:2714" ph="..." />
             <marker date="1494345369000" expanded="true" signature="2573:2753" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/change_password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="88" column="32" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="88" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reset_password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="76" column="79" lean-forward="false" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding>
+            <marker date="1494345817000" expanded="true" signature="2218:2361" ph="..." />
+            <marker date="1494345817000" expanded="true" signature="6072:6215" ph="..." />
           </folding>
         </state>
       </provider>
