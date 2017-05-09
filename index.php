@@ -20,7 +20,8 @@
 					<h2>Nerd Advice</h2>
 					<ul class="actions">
                         <?php if(isset($_SESSION['valid_user'])){
-                            echo "<li><a href=\"profile.php\" class=\"button big special\">My Account</a></li>";
+                            $username= $_SESSION['valid_user'];
+                            echo "<li><a href=\"profile.php\" class=\"button big special\">$username's Account</a></li>";
                         } else {
                             echo"<li><a href=\"auth/signup.php\" class=\"button big special\">Not a member?</a></li>";
                         }

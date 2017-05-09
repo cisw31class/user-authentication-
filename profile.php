@@ -61,8 +61,10 @@ $username= $_SESSION['valid_user'];
                                         ?>
 										<input type="text" name="email" placeholder="Email" class="form-control" value="<?php echo $email; ?>"><br>
 
-										<input type="submit" name="submit" value="Update">
+										<input type="submit" name="submit" value="Update Profile"><br>
 									</form>
+                                    <a href="change_password.php" class="btn btn-primary">Change Password</a>
+
 								</div>
 
 								<div class="col-md-4">
