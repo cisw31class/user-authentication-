@@ -56,9 +56,13 @@
 								<p>When it comes to writing code always write like the guy who maintains
                                 your code is a raging sociopath that knows where you live.
                                     We love linux, databases and PHP so thats what we focus on here.</p>
-								<ul class="actions">
-									<li><a href="#" class="button">Bookmark</a></li>
-								</ul>
+                                <?php
+                                if(isset($_SESSION['valid_user'])){
+                                    echo"<ul class=\"actions\">
+                                            <li><a href=\"#\" class=\"button\">Bookmark</a></li>
+                                        </ul>";
+                                }
+                                ?>
 							</div>
 							<div class="8u$ 12u$(medium)">
 								<ul class="major-icons row">
@@ -99,38 +103,38 @@
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Pictures of nerdstuff</h3>
-												<img src="images/pic01.jpg" alt="" />
+												<h3 class="caption">work on the go</h3>
+												<img src="images/laptop.JPG" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of a really nice computer setup</h3>
-												<img src="images/pic02.jpg" alt="" />
+												<h3 class="caption">some of our group</h3>
+												<img src="images/class.JPG" alt="" />
 											</a>
 										</div>
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of our team</h3>
-												<img src="images/pic03.jpg" alt="" />
+												<h3 class="caption">web and how it works</h3>
+												<img src="images/http.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of servers</h3>
-												<img src="images/pic04.jpg" alt="" />
+												<h3 class="caption">our team will make it happen</h3>
+												<img src="images/team.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of us doing homework/paperwork</h3>
-												<img src="images/pic05.jpg" alt="" />
+												<h3 class="caption">what the future holds</h3>
+												<img src="images/money.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of future jobs</h3>
-												<img src="images/pic06.jpg" alt="" />
+												<h3 class="caption">ideas ideas ideas</h3>
+												<img src="images/bulbs2.jpg" alt="" />
 											</a>
 										</div>
 									</div>
@@ -141,9 +145,13 @@
 								<p>We have had many obstacles and overcame a lot, but the thing that keeps us moving forward is the goal we have set for ourselves yesterday. There is no problem too big when you see yourself as the storm instead of hiding from it. By the way, this gives me an idea, we should start taking photos of the group everytime we have class, we will need them in the future so we can fill in these spots.</p>
 
 								<p>The goal is to create a website where people can actually browse and choose what they like (and set bookmarks) instead of just an informational site that does nothing. I was thinking that we can put up different discussions about different topics and this will provide a selection platform for our visitors. Again, this functionality will only be available to those who are logged in.</p>
-								<ul class="actions">
-									<li><a href="#" class="button">Bookmark</a></li>
-								</ul>
+								<?php
+                                if(isset($_SESSION['valid_user'])){
+                                    echo"<ul class=\"actions\">
+                                            <li><a href=\"#\" class=\"button\">Bookmark</a></li>
+                                        </ul>";
+                                }
+                                ?>
 							</div>
 						</div>
 					</section>

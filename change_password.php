@@ -1,4 +1,5 @@
 <?php require_once "html_output/html_main.php"; ?>
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <?php require_once "classes/database.php"; ?>
 <html>
@@ -17,7 +18,7 @@
 		<!-- Main -->
 				<header class="major">
 					<h2>Change Password</h2>
-					<p>Leave a note and us nerds will contact you.</p>
+					<p>all you need is your current password</p>
 				</header>
 
 
@@ -31,7 +32,7 @@
 
                                     <div class="col-md-4">
                                         <label>Old Password</label><br>
-                                        <input type="text" name="old_passwd">
+                                        <input type="password" name="old_passwd">
                                     </div>
 
                                     <div class="col-md-4">
@@ -46,7 +47,7 @@
 
                                     <div class="col-md-4">
                                         <label>New Password</label><br>
-                                        <input type="text" name="new_passwd">
+                                        <input type="password" name="new_passwd">
                                     </div>
 
                                     <div class="col-md-4">
@@ -61,7 +62,7 @@
 
                                     <div class="col-md-4">
                                         <label>Repeat New Password</label><br>
-                                        <input type="text" name="new_passwd2"><br>
+                                        <input type="password" name="new_passwd2"><br>
                                     </div>
 
                                     <div class="col-md-4">

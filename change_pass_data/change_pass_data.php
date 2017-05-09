@@ -1,4 +1,5 @@
 <?php
+ob_start();
 require_once('../bookmark_functions/bookmark_fns.php');
 session_start();
 /**
