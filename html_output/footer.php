@@ -13,11 +13,10 @@ function display_footer(){
             <div class='row'>
                 <section class='4u 12u$(medium) about'>
                     <h2>Did you know?</h2>
-                    <p>Someone can fill this text with something useful.
-                    Someone can fill this text with something useful.</p>";
+                    <p>XML and JSON is basically the same thing, JSON is clearly the more popular choice</p>";
                     if(isset($_SESSION['valid_user'])){
                         echo"<ul class='actions'>
-                                <li><a href='#' class='button'>Bookmark</a></li>
+                                <li><a href='bookmarks/bookmark.php?bk_message=Learn about JSON..the easiest way to create structured data' class='button'>Bookmark</a></li>
                             </ul>";
                     }
             echo"</section>

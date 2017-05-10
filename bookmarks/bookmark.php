@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row" align="center">
             <div class="col-md-12">
-                <h1>Bookmark this URL</h1>
+                <h1>Add to your list of bookmarks</h1>
                 <h3><?php echo $_GET['bk_message']; ?></h3>
             </div>
         </div>
@@ -41,11 +41,12 @@
             <div class="col-md-4">
                 <h2>Ideas</h2>
                 <h3>
-                    <a href="">http://www.serverwatch.com</a><br>
-                    <a href="">https://www.ubuntu.com</a><br>
-                    <a href="">http://www.itworld.com</a><br>
-                    <a href="">http://www.webopedia.com</a><br>
-                    <a href="">https://www.suse.com</a><br>
+                    <a href="http://www.serverwatch.com">http://www.serverwatch.com</a><br>
+                    <a href="https://www.ubuntu.com">https://www.ubuntu.com</a><br>
+                    <a href="http://www.itworld.com">http://www.itworld.com</a><br>
+                    <a href="http://www.webopedia.com">http://www.webopedia.com</a><br>
+                    <a href="https://www.suse.com">https://www.suse.com</a><br>
+                    <a href="http://www.json.org">http://www.json.org</a><br>
                 </h3>
             </div>
 
@@ -62,15 +63,15 @@
     <br><br>
 
     <div class="container">
-        <form action="reset_pass/forgot_passwd.php" method="POST">
+        <form action="add_bms.php" method="POST">
             <div class="row">
                 <div class="col-md-4">
                     <!--PLACEHOLDER-->
                 </div>
 
                 <div class="col-md-4">
-                    <label>URL</label><br>
-                    <input type="text" name="username"><br>
+                    <label>Bookmark this URL</label><br>
+                    <input type="text" name="new_url"><br>
                 </div>
 
                 <div class="col-md-4">
@@ -84,7 +85,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <input type="submit" name="submit" value="Book"> <span> </span><a href="javascript:history.back()" class="btn btn-default">Nevermind</a>
+                    <input type="submit" name="submit" value="Go"> <span> </span><a href="javascript:history.back()" class="btn btn-default">Nevermind</a>
                 </div>
 
                 <div class="col-md-4">

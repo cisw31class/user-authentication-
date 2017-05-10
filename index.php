@@ -52,7 +52,7 @@
                     echo"<section id=\"two\" class=\"feature\">
 						<div class=\"row\">
 							<div class=\"4u 12u$(medium)\">
-								<h2>Discussions</h2>
+								<h2>Ideas</h2>
 								<p>When it comes to writing code always write like the guy who maintains
                                 your code is a raging sociopath that knows where you live.
                                     We love linux, databases and PHP so thats what we focus on here.</p>

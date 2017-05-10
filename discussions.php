@@ -20,8 +20,8 @@ $username= $_SESSION['valid_user'];
 		<!-- Main -->
 			<div id="main" class="container">
 				<header class="major">
-					<h2>Discussions</h2>
-					<p>If you see something of interest then join...otherwise start your own</p>
+					<h2>Topics</h2>
+					<p>Let us give you ideas, you just bookmark what you like</p>
 				</header>
 				<div class="row 150%">
 					<div class="4u 12u$(medium)">
