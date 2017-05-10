@@ -10,6 +10,10 @@ ob_start();
   $passwd2=$_POST['conf_password'];
   // start session which may be needed later
   // start it now because it must go before headers
+
+    date_default_timezone_set("America/Los_Angeles");
+    $datestamp= date("m/d/Y");
+
   session_start();
   try   {
     // check forms filled in

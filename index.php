@@ -47,51 +47,52 @@
 					</section>
 
 				<!-- Two -->
-					<section id="two" class="feature">
-						<div class="row">
-							<div class="4u 12u$(medium)">
+                <?php
+                if(isset($_SESSION['valid_user'])){
+                    echo"<section id=\"two\" class=\"feature\">
+						<div class=\"row\">
+							<div class=\"4u 12u$(medium)\">
 								<h2>Discussions</h2>
 								<p>When it comes to writing code always write like the guy who maintains
                                 your code is a raging sociopath that knows where you live.
                                     We love linux, databases and PHP so thats what we focus on here.</p>
-                                <?php
-                                if(isset($_SESSION['valid_user'])){
-                                    echo"<ul class=\"actions\">
-                                            <li><a href=\"#\" class=\"button\">Bookmark</a></li>
-                                        </ul>";
-                                }
-                                ?>
+
+                                <ul class=\"actions\">
+                                    <li><a href=\"discussions.php\" class=\"button\">Go there</a></li>
+                                </ul>\"
 							</div>
-							<div class="8u$ 12u$(medium)">
-								<ul class="major-icons row">
-									<li class="4u 6u(small) 12u$(xsmall)">
-										<span class="icon alt major fa-server"></span>
+							<div class=\"8u$ 12u$(medium)\">
+								<ul class=\"major-icons row\">
+									<li class=\"4u 6u(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-server\"></span>
 										<p>Servers</p>
 									</li>
-									<li class="4u 6u$(small) 12u$(xsmall)">
-										<span class="icon alt major fa-linux"></span>
+									<li class=\"4u 6u$(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-linux\"></span>
 										<p>Linux</p>
 									</li>
-									<li class="4u$ 6u(small) 12u$(xsmall)">
-										<span class="icon alt major fa-github"></span>
+									<li class=\"4u$ 6u(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-github\"></span>
 										<p>Github</p>
 									</li>
-									<li class="4u 6u$(small) 12u$(xsmall)">
-										<span class="icon alt major fa-code"></span>
+									<li class=\"4u 6u$(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-code\"></span>
 										<p>HTML</p>
 									</li>
-									<li class="4u 6u(small) 12u$(xsmall)">
-										<span class="icon alt major fa-database"></span>
+									<li class=\"4u 6u(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-database\"></span>
 										<p>Databases</p>
 									</li>
-									<li class="4u$ 6u$(small) 12u$(xsmall)">
-										<span class="icon alt major fa-bolt"></span>
+									<li class=\"4u$ 6u$(small) 12u$(xsmall)\">
+										<span class=\"icon alt major fa-bolt\"></span>
 										<p>PHP</p>
 									</li>
 								</ul>
 							</div>
 						</div>
-					</section>
+					</section>";
+                }
+                ?>
 
 				<!-- Three -->
 					<section id="three" class="feature">
@@ -146,7 +147,7 @@
 								<?php
                                 if(isset($_SESSION['valid_user'])){
                                     echo"<ul class=\"actions\">
-                                            <li><a href=\"#\" class=\"button\">Bookmark</a></li>
+                                            <li><a href=\"bookmarks/bookmark.php?bk_message=Make a powerful team by using a VCS like github\" class=\"button\">Bookmark</a></li>
                                         </ul>";
                                 }
                                 ?>
@@ -154,15 +155,17 @@
 						</div>
 					</section>
 
-				<!-- Four -->
-					<section id="four" class="feature major">
-						<h2>Right this way...</h2>
-						<p>Clicking the "Join now" button will take the visitor to a page where he can create an account. I think the page should be simple, only asking for a name, email and password (and ofcourse confirm password).</p>
-						<ul class="actions">
-							<li><a href="auth/signup.php" class="button big special">Join now!</a></li>
-						</ul>
-					</section>
-
+                <?php
+                if(!isset($_SESSION['valid_user'])){
+                    echo"<section id=\"four\" class=\"feature major\">
+                            <h2>Right this way...</h2>
+                            <p>Clicking the \"Join now\" button will take the visitor to a page where he can create an account. I think the page should be simple, only asking for a name, email and password (and ofcourse confirm password).</p>
+                            <ul class=\"actions\">
+                                <li><a href=\"auth/signup.php\" class=\"button big special\">Join now!</a></li>
+                            </ul>
+                        </section>";
+                }
+                ?>
 			</div>
 
         <!--Footer-->

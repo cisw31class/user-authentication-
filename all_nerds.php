@@ -14,9 +14,8 @@ if(!isset($_SESSION['valid_user'])){
     <?php display_header(); ?>
     <!--HEADER-->
     <?php
-    $username= $_SESSION['valid_user'];
     $con= db_connect();
-    $sql="SELECT * FROM user WHERE username='$username'";
+    $sql="SELECT * FROM user";
     $result= $con->query($sql);
     ?>
 </head>
@@ -42,12 +41,14 @@ if(!isset($_SESSION['valid_user'])){
                         <tr>
                             <td>Name</td>
                             <td>Email</td>
+                            <td>Joined</td>
                         </tr>
                         <?php
                         while($row= $result->fetch_object()){ ?>
                         <tr>
                             <td><?php echo $row->username; ?></td>
                             <td><a href="mailto:<?php echo $row->email; ?>"><?php echo $row->email; ?></a></td>
+                            <td>PLACEHOLDER</td>
                         <tr>
                         <?php } ?>
                     </table>

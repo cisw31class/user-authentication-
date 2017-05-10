@@ -1,5 +1,9 @@
-<!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
+<!DOCTYPE HTML>
+<?php
+session_start();
+$username= $_SESSION['valid_user'];
+?>
 <html>
 	<head>
 		<title>Discussions</title>
@@ -32,7 +36,7 @@
                                     things it can do.</p>
 									<footer>
 										<ul class="actions">
-											<li><a href="#" class="button small alt">Bookmark</a></li>
+											<li><a href="bookmarks/bookmark.php?bk_message=Information about Linux and the Apache server" class="button small alt">Bookmark</a></li>
 										</ul>
 									</footer>
 								</section>
@@ -45,7 +49,7 @@
                                     teach you how databases power websites.</p>
 									<footer>
 										<ul class="actions">
-											<li><a href="#" class="button small alt">Bookmark</a></li>
+											<li><a href="bookmarks/bookmark.php?bk_message=Get creative making dynamic sites and using databases w/ PHP" class="button small alt">Bookmark</a></li>
 										</ul>
 									</footer>
 								</section>
