@@ -98,9 +98,10 @@
                 </div>
 
                 <div class="col-md-4">
-                    <input type="submit" name="submit" value="Go" class="btn btn-default"> <span> </span>
+                    <input type="submit" name="submit" value="Go" class="btn btn-success"> <span> </span>
                     <a href="../index.php" class="btn btn-default">Home</a> <span> </span>
-                    <a href="../profile.php" class="btn btn-default">Profile</a>
+                    <a href="../profile.php" class="btn btn-default">Profile</a> <span> </span>
+                    <a href="../recommend.php" class="btn btn-default">Recommendations</a>
                 </div>
 
                 <div class="col-md-4">
@@ -109,6 +110,8 @@
             </div>
         </form>
     </div>
+
+    <br><br><br>
 
 
 <!-- Scripts -->
