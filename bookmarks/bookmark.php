@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="../assets/css/main.css" />
+<!--    <link rel="stylesheet" href="../assets/css/main.css" />-->
     <!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
 
@@ -58,7 +58,7 @@
                     foreach($urls as $url){
                         echo"<tr>";
                         echo "<td><a href='".$url."'>".$url."</a></td>";
-                        echo"<td><input type='checkbox' name='del_me' class='form-control' value='".htmlspecialchars($url)."'></td>";
+                        echo"<td><input type='checkbox' name='del_me' value='".htmlspecialchars($url)."'></td>";
                         echo"</tr>";
                     }
                 ?>
@@ -88,7 +88,7 @@
 
                 <div class="col-md-4">
                     <label>Bookmark this URL</label><br>
-                    <input type="text" name="new_url"><br>
+                    <input type="text" name="new_url" class="form-control"><br>
                 </div>
 
                 <div class="col-md-4">
@@ -112,15 +112,6 @@
         </form>
     </div>
 
-<footer id="footer">
-    <div align="center">
-        <ul class="menu">
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </div>
-</footer>
 
 <!-- Scripts -->
 <script src="../assets/js/jquery.min.js"></script>
