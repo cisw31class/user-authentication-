@@ -25,7 +25,7 @@ function display_nav_bar(){
                                     if(isset($_SESSION['valid_user'])){
                                         echo"<li><a href='index.php'>Home</a></li>
                                             <li><a href='profile.php'>Profile</a></li>
-                                            <li><a href='discussions.php'>Discussions</a></li>
+                                            <li><a href='discussions.php'>Topics</a></li>
                                             <li><a href='bookmarks/bookmark.php'>Bookmarks</a></li>
                                             <li><a href='recommend.php'>Recommendations</a></li>
                                             <li><a href='all_nerds.php'>Classmates</a></li>";

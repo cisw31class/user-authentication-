@@ -7,6 +7,7 @@
         <!--HEADER-->
         <?php display_header(); ?>
         <!--HEADER-->
+        <?php require_once "database_functions/url_fns.php"; ?>
 	</head>
 	<body>
 
@@ -33,8 +34,18 @@
 
 		<!-- Main -->
 			<div id="main" class="container">
-
 				<!-- One -->
+                <h3><strong>Recommendations</strong></h3>
+                <p>
+                    <?php
+                    if(isset($_SESSION['valid_user'])){
+                        $results= recommend_urls($_SESSION['valid_user'], $popularity=1);
+                    }
+                    foreach ($results as $result){
+                        echo"<p><a href='".$result."'>".$result."</a></p>";
+                    }
+                    ?>
+                </p>
 					<section id="one" class="feature major">
 						<span class="icon alt major fa-paper-plane"></span>
 						<h2>Nerd Advice can help you take over the world!</h2>
