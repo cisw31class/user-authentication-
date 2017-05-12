@@ -42,7 +42,7 @@
     <div class="container>">
         <div class="row" align="center">
             <div class="col-md-4">
-                <form action="" method="POST">
+                <form action="delete_user_bookmarks.php" method="POST" name="bm_table">
                 <table class="table">
                     <tr>
                         <td>Bookmark</td>
@@ -54,16 +54,11 @@
                         echo"<h3>Your Bookmarks</h3>";
                     }
 
-
-                    foreach($urls as $url){
-                        echo"<tr>";
-                        echo "<td><a href='".$url."'>".$url."</a></td>";
-                        echo"<td><input type='checkbox' name='del_me' value='".htmlspecialchars($url)."'></td>";
-                        echo"</tr>";
-                    }
+                    //user stored bookmarks
+                    display_bookmarked_urls($urls);
                 ?>
                 </table>
-                    <a href="#" onClick="bm_table.submit();">Delete BM</a>
+                    <a href="#" onClick="bm_table.submit();" class="btn btn-default">Delete</a>
                 </form>
             </div>
 
@@ -102,7 +97,9 @@
                 </div>
 
                 <div class="col-md-4">
-                    <input type="submit" name="submit" value="Go"> <span> </span><a href="../index.php" class="btn btn-default">Home</a>
+                    <input type="submit" name="submit" value="Go" class="btn btn-default"> <span> </span>
+                    <a href="../index.php" class="btn btn-default">Home</a> <span> </span>
+                    <a href="../profile.php" class="btn btn-default">Profile</a>
                 </div>
 
                 <div class="col-md-4">
