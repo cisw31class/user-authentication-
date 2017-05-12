@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -14,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
     <script src="../bootstrap/js/bootstrap.js"></script>
     <!--BOOTSTRAP w/ Jquery CORE-->
+    <?php require_once('../bookmark_functions/bookmark_fns.php'); ?>
 
     <style>
         #profile_pic {
@@ -29,6 +31,7 @@
         <div class="row" align="center">
             <div class="col-md-12">
                 <h1>Add to your list of bookmarks</h1>
+                <?php display_message(); ?>
                 <h3><?php echo $_GET['bk_message']; ?></h3>
             </div>
         </div>
@@ -39,15 +42,29 @@
     <div class="container>">
         <div class="row" align="center">
             <div class="col-md-4">
-                <h2>Ideas</h2>
-                <h3>
-                    <a href="http://www.serverwatch.com">http://www.serverwatch.com</a><br>
-                    <a href="https://www.ubuntu.com">https://www.ubuntu.com</a><br>
-                    <a href="http://www.itworld.com">http://www.itworld.com</a><br>
-                    <a href="http://www.webopedia.com">http://www.webopedia.com</a><br>
-                    <a href="https://www.suse.com">https://www.suse.com</a><br>
-                    <a href="http://www.json.org">http://www.json.org</a><br>
-                </h3>
+                <form action="" method="POST">
+                <table class="table">
+                    <tr>
+                        <td>Bookmark</td>
+                        <td>Delete</td>
+                    </tr>
+                <?php
+                    $urls= get_user_urls($_SESSION['valid_user']);
+                    if(!empty($urls)){
+                        echo"<h3>Your Bookmarks</h3>";
+                    }
+
+
+                    foreach($urls as $url){
+                        echo"<tr>";
+                        echo "<td><a href='".$url."'>".$url."</a></td>";
+                        echo"<td><input type='checkbox' name='del_me' class='form-control' value='".htmlspecialchars($url)."'></td>";
+                        echo"</tr>";
+                    }
+                ?>
+                </table>
+                    <a href="#" onClick="bm_table.submit();">Delete BM</a>
+                </form>
             </div>
 
             <div class="col-md-4">
@@ -85,7 +102,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <input type="submit" name="submit" value="Go"> <span> </span><a href="javascript:history.back()" class="btn btn-default">Nevermind</a>
+                    <input type="submit" name="submit" value="Go"> <span> </span><a href="../index.php" class="btn btn-default">Home</a>
                 </div>
 
                 <div class="col-md-4">

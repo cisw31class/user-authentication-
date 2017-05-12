@@ -28,18 +28,20 @@ session_start();
       }
 
       // check URL is valid
-      if (!(@fopen($new_url, 'r'))) {
+      if (!fopen($new_url, 'r')) {
           throw new Exception('Not a valid URL.');
       }
 
       // try to add bm
       add_bm($new_url);
-      echo 'Bookmark added.';
+//      echo 'Bookmark added.';
 
-      // get the bookmarks this user has saved
-      if ($url_array = get_user_urls($_SESSION['valid_user'])) {
-          display_user_urls($url_array);
-      }
+        // get the bookmarks this user has saved
+      //if ($url_array = get_user_urls($_SESSION['valid_user'])) {
+//          display_user_urls($url_array);
+      //}
+      set_message("<p class='alert alert-info text-center'>$new_url has been bookmarked</p>");
+      redirect("bookmark.php");
   }
   catch (Exception $e) {
       $msg= $e->getMessage();

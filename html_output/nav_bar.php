@@ -26,7 +26,7 @@ function display_nav_bar(){
                                         echo"<li><a href='index.php'>Home</a></li>
                                             <li><a href='profile.php'>Profile</a></li>
                                             <li><a href='discussions.php'>Discussions</a></li>
-                                            <li><a href=''>Bookmarks</a></li>
+                                            <li><a href='bookmarks/bookmark.php'>Bookmarks</a></li>
                                             <li><a href='all_nerds.php'>Classmates</a></li>";
                                     } else {
                                         echo"<li><a href='index.php'>Home</a></li>

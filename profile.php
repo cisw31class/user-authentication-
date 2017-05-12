@@ -31,6 +31,7 @@ $username= $_SESSION['valid_user'];
 					<h2>Profile</h2>
 				</header>
 
+
 				<!-- Content -->
 					<section id="content">
 						<div class="container">

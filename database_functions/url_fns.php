@@ -23,7 +23,7 @@ function get_user_urls($username) {
 function add_bm($new_url) {
   // Add new bookmark to the database
 
-  echo "Attempting to add ".htmlspecialchars($new_url)."<br />";
+  //echo "Attempting to add ".htmlspecialchars($new_url)."<br />";
   $valid_user = $_SESSION['valid_user'];
 
   $conn = db_connect();
