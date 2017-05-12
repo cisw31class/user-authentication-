@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row" align="center">
             <div class="col-md-12">
-                <h1>Add to your list of bookmarks</h1>
+                <h1>Your bookmarks</h1>
                 <?php display_message(); ?>
                 <h3><?php echo $_GET['bk_message']; ?></h3>
             </div>
@@ -42,24 +42,25 @@
     <div class="container>">
         <div class="row" align="center">
             <div class="col-md-4">
-                <form action="delete_user_bookmarks.php" method="POST" name="bm_table">
-                <table class="table">
-                    <tr>
-                        <td>Bookmark</td>
-                        <td>Delete</td>
-                    </tr>
-                <?php
-                    $urls= get_user_urls($_SESSION['valid_user']);
+                <?php $urls= get_user_urls($_SESSION['valid_user']);
                     if(!empty($urls)){
-                        echo"<h3>Your Bookmarks</h3>";
+                        echo"<h3>What you have so far</h3>
+                            <form action=\"delete_user_bookmarks.php\" method=\"POST\" name=\"bm_table\">
+                            <table class=\"table\">
+                                                <tr>
+                                                    <th>Bookmark</th>
+                                                    <th>Delete</th>
+                                                </tr>";
                     }
-
-                    //user stored bookmarks
+                    //user stored bookmarks with delete functionality
                     display_bookmarked_urls($urls);
+
+                    if(!empty($urls)){
+                        echo"</table>
+                                <a href=\"#\" onClick=\"bm_table.submit();\" class=\"btn btn-danger\">Delete</a>
+                            </form>";
+                    }
                 ?>
-                </table>
-                    <a href="#" onClick="bm_table.submit();" class="btn btn-default">Delete</a>
-                </form>
             </div>
 
             <div class="col-md-4">

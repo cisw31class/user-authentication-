@@ -36,7 +36,7 @@ require_once('../bookmark_functions/bookmark_fns.php');
       }
   }
 
-  set_message("<h3 class='alert alert-info text center'>You have successfully deleted stored bookmarks</h3>");
+  set_message("<h3 class='alert alert-info text center'>Delete successful</h3>");
   redirect("bookmark.php");
 
   // get the bookmarks this user has saved

@@ -59,7 +59,7 @@
 
                                 <ul class=\"actions\">
                                     <li><a href=\"discussions.php\" class=\"button\">Go there</a></li>
-                                </ul>\"
+                                </ul>
 							</div>
 							<div class=\"8u$ 12u$(medium)\">
 								<ul class=\"major-icons row\">
@@ -147,7 +147,7 @@
 								<?php
                                 if(isset($_SESSION['valid_user'])){
                                     echo"<ul class=\"actions\">
-                                            <li><a href=\"bookmarks/bookmark.php?bk_message=Make a powerful team by using a VCS like github\" class=\"button\">Bookmark</a></li>
+                                            <li><a href=\"bookmarks/bookmark.php?bk_message=Make your team effective by using a VCS like github\" class=\"button\">Bookmark</a></li>
                                         </ul>";
                                 }
                                 ?>

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29586882-0a47-45c9-b199-df32a1484029" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bookmarks/delete_user_bookmarks.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database_functions/helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookmark_functions/bookmark_fns.php" afterPath="$PROJECT_DIR$/bookmark_functions/bookmark_fns.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookmarks/bookmark.php" afterPath="$PROJECT_DIR$/bookmarks/bookmark.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookmarks/delete_user_bookmarks.php" afterPath="$PROJECT_DIR$/bookmarks/delete_user_bookmarks.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database_functions/helper.php" afterPath="$PROJECT_DIR$/database_functions/helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,9 +20,26 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="351">
+              <caret line="149" column="101" lean-forward="false" selection-start-line="149" selection-start-column="101" selection-end-line="149" selection-end-column="101" />
+              <folding>
+                <marker date="1494597268000" expanded="true" signature="1779:3379" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="1805:3363" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="1844:2355" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="1879:2144" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="2200:2341" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="2395:3350" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="2434:3336" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="2484:2583" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="2634:2730" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="2781:2879" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="2930:3024" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="3074:3177" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="3229:3322" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="6048:6275" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="6536:7066" ph="..." />
+                <marker date="1494597268000" expanded="true" signature="6885:7031" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,9 +57,13 @@
       <file leaf-file-name="bookmark.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bookmarks/bookmark.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="101" column="67" lean-forward="false" selection-start-line="101" selection-start-column="67" selection-end-line="101" selection-end-column="67" />
-              <folding />
+            <state relative-caret-position="450">
+              <caret line="66" column="4" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+              <folding>
+                <marker date="1494597990000" expanded="true" signature="1670:1967" ph="..." />
+                <marker date="1494597990000" expanded="true" signature="1722:1967" ph="..." />
+                <marker date="1494597990000" expanded="true" signature="1775:1967" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,8 +71,8 @@
       <file leaf-file-name="helper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database_functions/helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+            <state relative-caret-position="210">
+              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
                 <element signature="e#6#86#0#PHP" expanded="true" />
               </folding>
@@ -63,10 +83,10 @@
       <file leaf-file-name="delete_user_bookmarks.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookmarks/delete_user_bookmarks.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="38" column="102" lean-forward="false" selection-start-line="38" selection-start-column="102" selection-end-line="38" selection-end-column="102" />
+            <state relative-caret-position="378">
+              <caret line="38" column="73" lean-forward="false" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
               <folding>
-                <marker date="1494596797000" expanded="true" signature="387:467" ph="..." />
+                <marker date="1494597343000" expanded="true" signature="387:467" ph="..." />
               </folding>
             </state>
           </provider>
@@ -107,7 +127,6 @@
         <option value="$PROJECT_DIR$/reset_pass/forgot_passwd.php" />
         <option value="$PROJECT_DIR$/all_nerds.php" />
         <option value="$PROJECT_DIR$/new_user/register_new.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/discussions.php" />
         <option value="$PROJECT_DIR$/html_output/footer.php" />
         <option value="$PROJECT_DIR$/html_output/nav_bar.php" />
@@ -117,6 +136,7 @@
         <option value="$PROJECT_DIR$/html_output/header.php" />
         <option value="$PROJECT_DIR$/assets/css/main.css" />
         <option value="$PROJECT_DIR$/bookmark_functions/bookmark_fns.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/bookmarks/delete_user_bookmarks.php" />
         <option value="$PROJECT_DIR$/database_functions/helper.php" />
         <option value="$PROJECT_DIR$/bookmarks/bookmark.php" />
@@ -327,12 +347,12 @@
       <workItem from="1494336476746" duration="7029000" />
       <workItem from="1494511874889" duration="6138000" />
       <workItem from="1494555498901" duration="1953000" />
-      <workItem from="1494595669611" duration="1350000" />
+      <workItem from="1494595669611" duration="2433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64226000" />
+    <option name="totallyTimeSpent" value="65309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="75" y="23" width="1195" height="716" extended-state="0" />
@@ -423,7 +443,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2485">
           <caret line="174" column="0" lean-forward="true" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1494597268000" expanded="true" signature="1779:3379" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="1805:3363" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="1844:2355" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="1879:2144" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2200:2341" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2395:3350" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2434:3336" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2484:2583" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2634:2730" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2781:2879" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2930:3024" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="3074:3177" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="3229:3322" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="6048:6275" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="6536:7066" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="6885:7031" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -615,14 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="41" lean-forward="false" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database_functions/data_valid_fns.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -693,20 +722,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="149" column="101" lean-forward="false" selection-start-line="149" selection-start-column="101" selection-end-line="149" selection-end-column="101" />
+          <folding>
+            <marker date="1494597268000" expanded="true" signature="1779:3379" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="1805:3363" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="1844:2355" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="1879:2144" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2200:2341" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2395:3350" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2434:3336" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2484:2583" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2634:2730" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2781:2879" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="2930:3024" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="3074:3177" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="3229:3322" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="6048:6275" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="6536:7066" ph="..." />
+            <marker date="1494597268000" expanded="true" signature="6885:7031" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bookmarks/delete_user_bookmarks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="38" column="102" lean-forward="false" selection-start-line="38" selection-start-column="102" selection-end-line="38" selection-end-column="102" />
+        <state relative-caret-position="378">
+          <caret line="38" column="73" lean-forward="false" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
           <folding>
-            <marker date="1494596797000" expanded="true" signature="387:467" ph="..." />
+            <marker date="1494597343000" expanded="true" signature="387:467" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database_functions/helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
             <element signature="e#6#86#0#PHP" expanded="true" />
           </folding>
@@ -715,9 +769,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bookmarks/bookmark.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="101" column="67" lean-forward="false" selection-start-line="101" selection-start-column="67" selection-end-line="101" selection-end-column="67" />
-          <folding />
+        <state relative-caret-position="450">
+          <caret line="66" column="4" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+          <folding>
+            <marker date="1494597990000" expanded="true" signature="1670:1967" ph="..." />
+            <marker date="1494597990000" expanded="true" signature="1722:1967" ph="..." />
+            <marker date="1494597990000" expanded="true" signature="1775:1967" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
