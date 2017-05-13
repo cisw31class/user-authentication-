@@ -27,8 +27,8 @@ if(!isset($_SESSION['valid_user'])){
     <!-- Main -->
     <div id="main" class="container">
         <header class="major">
-            <h2>Classmates</h2>
-            <p>This table contains all users</p>
+            <h2>All nerds</h2>
+            <p><!--PLACEHOLDER--></p>
         </header>
         <div class="row">
             <div class="col-md-2">
@@ -41,14 +41,14 @@ if(!isset($_SESSION['valid_user'])){
                         <tr>
                             <td>Name</td>
                             <td>Email</td>
-                            <td>Joined</td>
+                            <td>Photo</td>
                         </tr>
                         <?php
                         while($row= $result->fetch_object()){ ?>
                         <tr>
                             <td><?php echo $row->username; ?></td>
                             <td><a href="mailto:<?php echo $row->email; ?>"><?php echo $row->email; ?></a></td>
-                            <td>PLACEHOLDER</td>
+                            <td><img src="images/avatar.png" height="62" width="62" class="img-circle"></td>
                         <tr>
                         <?php } ?>
                     </table>

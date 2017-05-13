@@ -12,44 +12,31 @@ function display_footer(){
         <div class='container'>
             <div class='row'>
                 <section class='4u 12u$(medium) about'>
-                    <h2>Did you know?</h2>
-                    <p>XML and JSON is basically the same thing, JSON is clearly the more popular choice</p>";
+                    <h2>Is that...</h2>
+                    <p>Yes its called JSON and we think that if you don't scratch it, it should go away on its own.</p>";
                     if(isset($_SESSION['valid_user'])){
                         echo"<ul class='actions'>
-                                <li><a href='bookmarks/bookmark.php?bk_message=Learn about JSON..the easiest way to create structured data' class='button'>Bookmark</a></li>
+                                <li><a href='bookmarks/bookmark.php?bk_message=or maybe they have a cream for it now' class='button'>Bookmark</a></li>
                             </ul>";
                     }
             echo"</section>
                 
                 <section class='4u 6u(medium) 12u$(small)'>
-                    <h3>Updates</h3>
-                    <ul class='updates'>
-                        <li>
-                            <p><a href='#'>This can be static text, it would serve as a decent place holder.</a></p>
-                            <span class='timestamp'>Posted 2 hours ago</span>
-                        </li>
-                        <li>
-                            <p><a href='#'>Also, static...maybe some news story that just happened</a></p>
-                            <span class='timestamp'>Posted 4 hours ago</span>
-                        </li>
-                    </ul>
-                </section>
-                
-                <section class='4u$ 6u$(medium) 12u$(small)'>
-                    <h3>Get in touch</h3>
+                    <h3>Location</h3>
                     <ul class='labeled-icons'>
                         <li>
                             <h4 class='icon alt fa-home'><span class='label'>Address</span></h4>
                             <span>1100 N Grand Ave<br />
                             Walnut, CA 91789</span>
                         </li>
-                        <li>
-                            <h4 class='icon alt fa-phone'><span class='label'>Phone</span></h4>
-                            <span>(800) 555-5555</span>
-                        </li>
+                </section>
+                
+                <section class='4u$ 6u$(medium) 12u$(small)'>
+                    <h3>Get in touch</h3>
+                    <ul class='labeled-icons'>
                         <li>
                             <h4 class='icon alt fa-envelope'><span class='label'>Email</span></h4>
-                            <a href='#'>example@example.com</a>
+                            <a href='#'>generalnerd@nerdadvice.com</a>
                         </li>
                     </ul>
                 </section>

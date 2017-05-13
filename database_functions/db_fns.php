@@ -31,4 +31,19 @@ function display_message(){
     }
 }
 
+function upload_photo($files_array){
+    $conn= db_connect();
+    $destination= 'user_photos/';
+    $tmp_name= $files_array['tmp_name'];
+    $name= $files_array['name'];
+    $db_name= $destination . $name;
+
+    $sql="INSERT INTO user(user_photo) VALUES(".$db_name.");";
+    if(move_uploaded_file($tmp_name, $destination)){
+        redirect("../profile.php");
+    } else {
+        echo"UPLOAD FAILED DANIKA";
+    }
+}
+
 ?>

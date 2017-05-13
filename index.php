@@ -35,26 +35,25 @@
 		<!-- Main -->
 			<div id="main" class="container">
 				<!-- One -->
-                <h3><strong>Recommendations</strong></h3>
-                <p>
                     <?php
                     if(isset($_SESSION['valid_user'])){
                         $results= recommend_urls($_SESSION['valid_user'], $popularity=1);
-                    }
-                    foreach ($results as $result){
-                        echo"<p><a href='".$result."'>".$result."</a></p>";
+                        echo"<h3><strong>Recommendations</strong></h3>";
+                        foreach ($results as $result){
+                            echo"<p><a href='".$result."'>".$result."</a></p>";
+                        }
                     }
                     ?>
-                </p>
 					<section id="one" class="feature major">
 						<span class="icon alt major fa-paper-plane"></span>
 						<h2>Nerd Advice can help you take over the world!</h2>
 
-						<p>Search through different content and bookmark what you like,
-                        us nerds will then go to work to and recommend similar content. We have many
-                        discussions about web technologies that usually catch the attention of
-                        others maybe it will catch yours too. We want to help you discover what you
-                        like so come on in and open your free account.</p>
+						<p>Look through the pages and let us give you new ideas, we will compare your interests
+                            with the interests of others and give you recommendations that may spark new ideas.
+                            We cover topics such as web technologies and personal development that usually
+                            catch the attention of others maybe it will catch yours too. We want to help you
+                            discover what you like so come in and open your mind and your account (20 super
+                            easy payments of $99.99 plus your driver license and your house key).</p>
 					</section>
 
 				<!-- Two -->
@@ -65,8 +64,8 @@
 							<div class=\"4u 12u$(medium)\">
 								<h2>Ideas</h2>
 								<p>When it comes to writing code always write like the guy who maintains
-                                your code is a raging sociopath that knows where you live.
-                                    We love linux, databases and PHP so thats what we focus on here.</p>
+                                your code is a raging sociopath that knows where you live (in a darth-vader voice).
+                                </p>
 
                                 <ul class=\"actions\">
                                     <li><a href=\"discussions.php\" class=\"button\">Go there</a></li>
@@ -152,9 +151,15 @@
 							</div>
 							<div class="4u$ 12u$(medium) important(medium)">
 								<h2>Work hard or hardly work</h2>
-								<p>We have had many obstacles and overcame a lot, but the thing that keeps us moving forward is the goal we have set for ourselves yesterday. There is no problem too big when you see yourself as the storm instead of hiding from it. By the way, this gives me an idea, we should start taking photos of the group everytime we have class, we will need them in the future so we can fill in these spots.</p>
+								<p>We have had many obstacles and overcame a lot, but the thing that keeps us moving
+                                    forward is the goal we have set for ourselves yesterday (and also money). There
+                                    is no problem too big when you see yourself as the storm instead of hiding from it.</p>
 
-								<p>The goal is to create a website where people can actually browse and choose what they like (and set bookmarks) instead of just an informational site that does nothing. I was thinking that we can put up different discussions about different topics and this will provide a selection platform for our visitors. Again, this functionality will only be available to those who are logged in.</p>
+								<p>This website is here to help generate ideas. We will give you topics and
+                                you let your imagination go as you come up with websites you can bookmark and learn
+                                from...oh but when your imagination comes back make sure it brings pizza. The idea is
+                                    to think outside the box, in other words don't be religious cause
+                                when you search for knowledge you cant just do what someone told you to do.</p>
 								<?php
                                 if(isset($_SESSION['valid_user'])){
                                     echo"<ul class=\"actions\">
