@@ -88,12 +88,12 @@ function recommend_urls($valid_user, $popularity = 1) {
             having count(bm_url)>".$popularity;
 
   if (!($result = $conn->query($query))) {
-      set_message("<h4 class='text-center'>We currently dont have any recommendations for you</h4>");
+      set_recommend_message("<h4 class='text-center'>Not enough users to complete a recommendation</h4>");
     //throw new Exception('Could not find any bookmarks to recommend.');
   }
 
   if ($result->num_rows==0) {
-      set_message("<h4 class='text-center'>We currently dont have any recommendations for you</h4>");
+      set_recommend_message("<h4 class='text-center'>Not enough users to complete a recommendation</h4>");
     //throw new Exception('Could not find any bookmarks to recommend.');
   }
 

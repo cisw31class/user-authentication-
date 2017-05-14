@@ -11,20 +11,31 @@ require_once "../bookmark_functions/bookmark_fns.php";
  */
 $con= db_connect();
 
+$user= $_SESSION['valid_user'];
 $email= $_POST['email'];
+$pic= $_FILES['user_pic'];
+$pic_size= $pic['size'];
+$current_pic= $_POST['current_pic'];
 
-try{
-    if(!valid_email($email)){
-        throw new Exception("This is not a vaild email address, try again");
+//--------------------------------------UPLOAD PHOTO and UPDATE PROFILE----------------------------
+if($pic_size != 0){
+    unlink("../nerd_pics/". $current_pic);
+    upload_photo($pic, $con, $user);
+} else {
+    try{
+        if(!valid_email($email)){
+            throw new Exception("This is not a vaild email address, try again");
+        }
+    }
+    catch(Exception $e){
+        echo $e->getMessage();
+        exit;
     }
 }
-catch(Exception $e){
-    echo $e->getMessage();
-    exit;
-}
-$username= $_SESSION['valid_user'];
 
-$sql="UPDATE user SET email='$email' WHERE username='$username'";
+
+
+$sql="UPDATE user SET email='$email' WHERE username='$user'";
 $con->query($sql);
 
 set_message("<h3 class='alert alert-info text-center'>Profile has been updated</h3>");

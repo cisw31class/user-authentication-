@@ -16,7 +16,7 @@ $username= $_SESSION['valid_user'];
         <?php
         $database= new Database();
 
-        $sql="SELECT email FROM user WHERE username='$username'";
+        $sql="SELECT email, user_pic FROM user WHERE username='$username'";
         $result=$database->run_query($sql);
         ?>
 	</head>
@@ -67,27 +67,34 @@ $username= $_SESSION['valid_user'];
                             </div>
                             <!--MODAL-->
 
+                            <?php
+                            while($row= $result->fetch_object()){
+                                $email= $row->email;
+                                $current_pic= $row->user_pic;
+                            }
+                            ?>
+
 							<div class="row">
 								<div class="col-md-4">
 									<!--PLACEHOLDER-->
 								</div>
 
 								<div class="col-md-4">
+
                                     <?php display_message(); ?>
+                                    <?php display_recommend_message(); ?>
+
 									<div id="profile_pic">
-										<img src="images/avatar.png" class="img-circle" height="200" width="200">
+										<img src="<?php echo $current_pic ? 'nerd_pics/'.$current_pic : 'PLACEHOLDER/avatar.JPG'   ?>" class="img-circle" height="200" width="200">
 									</div>
 
 									<br><br>
 
-									<form action="update_profile/update.php" method="POST">
-                                        <?php
-                                        while($row= $result->fetch_object()){
-                                            $email= $row->email;
-                                        }
-                                        ?>
-										<input type="text" name="email" placeholder="Email" class="form-control" value="<?php echo $email; ?>"><br>
+									<form action="update_profile/update.php" method="POST" enctype="multipart/form-data">
+                                        <input type="file" name="user_pic"><br>
 
+										<input type="text" name="email" placeholder="Email" class="form-control" value="<?php echo $email; ?>"><br>
+                                        <input type="hidden" name="current_pic" value="<?php echo $current_pic; ?>">
 										<input type="submit" name="submit" value="Update Profile"><br>
 									</form>
                                     <a href="change_password.php" class="btn btn-primary">Change Password</a> <span> </span> <button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Recommend Something</button>

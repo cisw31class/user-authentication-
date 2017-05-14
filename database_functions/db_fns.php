@@ -1,5 +1,6 @@
 <?php
 
+
 function db_connect() {
    $result = new mysqli('127.0.0.1', 'root', '1945', 'bookmarks');
    if (!$result) {
@@ -31,18 +32,28 @@ function display_message(){
     }
 }
 
-function upload_photo($files_array){
-    $conn= db_connect();
-    $destination= 'user_photos/';
-    $tmp_name= $files_array['tmp_name'];
-    $name= $files_array['name'];
-    $db_name= $destination . $name;
+function set_recommend_message($msg){
+    $_SESSION['rec_mess']= $msg;
+}
 
-    $sql="INSERT INTO user(user_photo) VALUES(".$db_name.");";
-    if(move_uploaded_file($tmp_name, $destination)){
-        redirect("../profile.php");
-    } else {
-        echo"UPLOAD FAILED DANIKA";
+function display_recommend_message(){
+    if(isset($_SESSION['rec_mess'])){
+        echo $_SESSION['rec_mess'];
+        unset($_SESSION['rec_mess']);
+    }
+}
+
+function upload_photo($file, $conn, $session){
+    $pic= $file['user_pic'];
+    $tmp= $file['tmp_name'];
+    $name= $file['name'];
+    $target= 'nerd_pics/';
+    $destination= $target.$name;
+
+    $sql="UPDATE user SET user_pic='$name' WHERE username='$session'";
+    $conn->query($sql);
+    if(!move_uploaded_file($tmp, "../".$destination)){
+        throw new Exception("YOUR FILE FAILED TO UPLOAD AND YES, ITS BECAUSE HES BLACK");
     }
 }
 
