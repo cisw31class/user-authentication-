@@ -6,6 +6,7 @@
 <?php
 session_start();
 $username= $_SESSION['valid_user'];
+$capitol= ucfirst($_SESSION['valid_user']);
 ?>
 <html>
 	<head>
@@ -37,7 +38,7 @@ $username= $_SESSION['valid_user'];
 						<div class="container">
 							<div class="row" align="center">
 								<div class="col-md-12">
-									<h3>Welcome <?php echo $username; ?></h3><br><br><br>
+									<h3>Welcome <?php echo $capitol; ?></h3><br><br><br>
 								</div>	
 							</div>
 
@@ -52,13 +53,15 @@ $username= $_SESSION['valid_user'];
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
                                         <div class="inModal">
-                                            <h3>Based on the most visited, we recommend the following.</h3>
                                             <?php
                                             $url_results= recommend_urls($_SESSION['valid_user'], $popularity=1);
                                             if(!empty($url_results)){
+                                                echo"<h3>Based on the most visited, we recommend the following.</h3>";
                                                 foreach ($url_results as $url_result){
                                                     echo "<h3><a href='".$url_result."'>".$url_result."</a></h3>";
                                                 }
+                                            } else {
+                                                echo"<h3>Not enough users to complete a recommendation</h3>";
                                             }
                                             ?>
                                         </div>
