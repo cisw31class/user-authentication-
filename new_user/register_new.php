@@ -1,28 +1,68 @@
 <?php
-
+ob_start();
   // include function files for this application
-//  require_once('../bookmark_functions/bookmark_fns.php');
-require_once "../classes/database.php";
-  ob_start();
-
-  $database= new Database();
+  require_once('../bookmark_functions/bookmark_fns.php');
 
   //create short variable names
-  $email= $database->escape_string($_POST['email']);
-  $username= $database->escape_string($_POST['name']);
-  $password= $database->escape_string($_POST['password']);
-
+  $email=$_POST['email'];
+  $username=$_POST['name'];
+  $passwd=$_POST['password'];
+  $passwd2=$_POST['conf_password'];
   // start session which may be needed later
   // start it now because it must go before headers
 
+    date_default_timezone_set("America/Los_Angeles");
+    $datestamp= date("m/d/Y");
 
-    if($database->register($username, $email, $password)){
-        session_start();
-        $_SESSION['valid_user'] = $username;
-        $database->redirect("../welcome.php?");
-    } else {
-      $database->redirect("../error_page/oops.php?error_message=There was a problem creating your account");
+  session_start();
+  try   {
+    // check forms filled in
+
+    if (!filled_out($_POST)) {
+      throw new Exception('You have not filled the form out correctly - Please go back and try again.');
     }
 
+    // email address not valid
+    if (!valid_email($email)) {
+      throw new Exception('That is not a valid email address.  Please go back and try again.');
+    }
 
+       //passwords not the same
+       if ($passwd != $passwd2) {
+         throw new Exception('The passwords you entered do not match - please go back and try again.');
+       }
+
+       //check password length is ok
+       //ok if username truncates, but passwords will get
+       //munged if they are too long.
+       if ((strlen($passwd) < 6) || (strlen($passwd) > 16)) {
+         throw new Exception('Your password must be between 6 and 16 characters. Please go back and try again.');
+       }
+
+    // attempt to register
+    // this function can also throw an exception
+    register($username, $email, $passwd);
+    // register session variable
+    $_SESSION['valid_user'] = $username;
+
+    // provide link to members page NOT SURE IF WE SHOULD USE THIS OR NOT WHAT DO YOU GUYS THINK?
+//    do_html_header('Registration successful');
+    echo 'Your registration was successful.  Go to the members page to start setting up your bookmarks!';
+    header("Location: ../index.php");
+
+      //NOT SURE IF WE SHOULD USE THIS OR NOT WHAT DO YOU GUYS THINK?
+//    do_html_url('member.php', 'Go to members page');
+
+   // end page NOT SURE IF WE SHOULD USE THIS OR NOT WHAT DO YOU GUYS THINK?
+//   do_html_footer();
+  }
+  catch (Exception $e) {
+    //NOT SURE IF WE SHOULD USE THIS OR NOT WHAT DO YOU GUYS THINK?
+//     do_html_header('Problem:');
+      $msg= $e->getMessage();
+      redirect("../error_page/error.php?error_message=$msg");
+     //NOT SURE IF WE SHOULD USE THIS OR NOT WHAT DO YOU GUYS THINK?
+//     do_html_footer();
+     exit;
+  }
 ?>

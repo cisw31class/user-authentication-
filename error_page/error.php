@@ -1,7 +1,15 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ocean
+ * Date: 5/7/17
+ * Time: 2:30 PM
+ */
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Leaving?</title>
+    <title>Oops</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -26,21 +34,19 @@
 <!-- Main -->
 <div id="main" class="container 75%">
     <header class="major">
-        <h2>Have a good one</h2>
-        <p>and always remember...the best things in life will make you fat, drunk or pregnant.</p>
+        <h2>Oops...seems there has been an error</h2>
+        <p>The task failed successfully because...<br>
+            <?php echo $_GET['error_message']; ?></p>
+        <br>
+        <img src="../images/mistake.jpg" height="300" width="500">
     </header>
 
-    <!-- Content -->
-    <section id="content">
-        <a href="https://www.google.com" class="btn btn-default">Got it</a> <span> </span> <a href="../index.php" class="btn btn-primary">No, Go Back</a>
+    <section>
+        <a href="javascript:history.back()" class="btn btn-primary">BACK</a>
     </section>
-
 </div>
 
-<footer id="footer" style="position: fixed;
-                            bottom: 0px;
-                            right: 0px;
-                            left: 0px;">
+<footer id="footer">
     <div align="center">
         <ul class="menu">
             <li><a href="#">Terms of Use</a></li>

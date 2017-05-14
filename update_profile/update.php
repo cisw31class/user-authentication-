@@ -1,54 +1,43 @@
 <?php
-require_once "../classes/database.php";
+ob_start();
 session_start();
+
+require_once "../bookmark_functions/bookmark_fns.php";
 /**
  * Created by PhpStorm.
  * User: ocean
- * Date: 5/1/17
- * Time: 4:46 PM
+ * Date: 5/7/17
+ * Time: 1:39 PM
  */
-$database= new Database();
+$con= db_connect();
 
-$username= $_SESSION['valid_user'];
-$school=$database->escape_string($_POST['school']);
-$major=$database->escape_string($_POST['major']);
-$interest=$database->escape_string($_POST['interest']);
-$current_photo=$database->escape_string($_POST['current_photo']);
+$user= $_SESSION['valid_user'];
+$email= $_POST['email'];
+$pic= $_FILES['user_pic'];
+$pic_size= $pic['size'];
+$current_pic= $_POST['current_pic'];
 
-$user_photo= $_FILES['user_photo'];
-$tmp_photo_name= $user_photo['tmp_name'];
-$target_dir= "/var/www/LAMP/user-authentication-/nerd_profiles/";
-$db_path= "nerd_profiles/".$user_photo['name'];
-$target_file= $target_dir . $user_photo['name'];
-$photo_size= $user_photo['size'];
-
-if($user_photo['size'] != 0){
-    $photo_sql="UPDATE user SET school='$school', major='$major', interest='$interest', image_path='$db_path' WHERE username='$username'";
-    if($database->run_query($photo_sql)){
-        move_uploaded_file($tmp_photo_name, $target_file);
-        unlink('../'. $current_photo);
-        Database::set_message("<h4 class='alert alert-info text-center'>Your profile has been updated successfully</h4>");
-        $database->redirect("../profile.php");
-    } else {
-        Database::set_message("There was a problem with the update");
-    }
+//--------------------------------------UPLOAD PHOTO and UPDATE PROFILE----------------------------
+if($pic_size != 0){
+    unlink("../nerd_pics/". $current_pic);
+    upload_photo($pic, $con, $user);
 } else {
-    $sql="UPDATE user SET school='$school', major='$major', interest='$interest' WHERE username='$username'";
-    $result= $database->run_query($sql);
-    if($result){
-        Database::set_message("<h4 class='alert alert-info text-center'>Your profile has been updated successfully</h4>");
-        $database->redirect("../profile.php");
-    } else {
-        Database::set_message("<h4 class='alert alert-danger'>Your profile could not be updated, try again or contact administrator</h4>");
-        $database->redirect("../error_page/oops.php");
+    try{
+        if(!valid_email($email)){
+            throw new Exception("This is not a vaild email address, try again");
+        }
+    }
+    catch(Exception $e){
+        echo $e->getMessage();
+        exit;
     }
 }
 
 
 
+$sql="UPDATE user SET email='$email' WHERE username='$user'";
+$con->query($sql);
 
-
-
-
-
+set_message("<h3 class='alert alert-info text-center'>Profile has been updated</h3>");
+redirect("../profile.php");
 

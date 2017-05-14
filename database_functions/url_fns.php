@@ -23,7 +23,7 @@ function get_user_urls($username) {
 function add_bm($new_url) {
   // Add new bookmark to the database
 
-  echo "Attempting to add ".htmlspecialchars($new_url)."<br />";
+  //echo "Attempting to add ".htmlspecialchars($new_url)."<br />";
   $valid_user = $_SESSION['valid_user'];
 
   $conn = db_connect();
@@ -88,11 +88,13 @@ function recommend_urls($valid_user, $popularity = 1) {
             having count(bm_url)>".$popularity;
 
   if (!($result = $conn->query($query))) {
-     throw new Exception('Could not find any bookmarks to recommend.');
+      set_recommend_message("<h4 class='text-center'>Not enough users to complete a recommendation</h4>");
+    //throw new Exception('Could not find any bookmarks to recommend.');
   }
 
   if ($result->num_rows==0) {
-     throw new Exception('Could not find any bookmarks to recommend.');
+      set_recommend_message("<h4 class='text-center'>Not enough users to complete a recommendation</h4>");
+    //throw new Exception('Could not find any bookmarks to recommend.');
   }
 
   $urls = array();

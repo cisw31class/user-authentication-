@@ -1,11 +1,13 @@
-<!DOCTYPE HTML>
 <?php require_once "html_output/html_main.php"; ?>
+<!DOCTYPE HTML>
+<?php session_start(); ?>
 <html>
 	<head>
 		<title>Nerd Advice</title>
         <!--HEADER-->
         <?php display_header(); ?>
         <!--HEADER-->
+        <?php require_once "database_functions/url_fns.php"; ?>
 	</head>
 	<body>
 
@@ -16,36 +18,42 @@
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<h1>Nerd Advice</h1>
-                    <?php
-                    if(isset($_SESSION['valid_user'])){
-                        echo"<h3>I have and angel on one shoulder and a devil on the other, Im also deaf in one ear.</h3>";
-                        echo"<p class=\"footnote\"><a href=\"profile.php\">go to my Profile</a></p>";
-                    } else {
-                        echo"<ul class=\"actions\">
-						        <li><a href=\"auth/signup.php\" class=\"button big special\">Not a member?</a></li>
-					        </ul>";
-                    }
-                    ?>
-
-
+					<h2>Nerd Advice</h2>
+					<ul class="actions">
+                        <?php if(isset($_SESSION['valid_user'])){
+                            $username= $_SESSION['valid_user'];
+                            echo "<li><a href=\"profile.php\" class=\"button big special\">$username's Account</a></li>";
+                        } else {
+                            echo"<li><a href=\"auth/signup.php\" class=\"button big special\">Not a member?</a></li>";
+                        }
+                        ?>
+					</ul>
 				</div>
-				<a href="#one" class="more scrolly">Learn more ...</a>
 			</section>
+
 
 		<!-- Main -->
 			<div id="main" class="container">
-
 				<!-- One -->
+                    <?php
+                    if(isset($_SESSION['valid_user'])){
+                        $results= recommend_urls($_SESSION['valid_user'], $popularity=1);
+                        echo"<h3><strong>Recommendations</strong></h3>";
+                        foreach ($results as $result){
+                            echo"<p><a href='".$result."'>".$result."</a></p>";
+                        }
+                    }
+                    ?>
 					<section id="one" class="feature major">
 						<span class="icon alt major fa-paper-plane"></span>
 						<h2>Nerd Advice can help you take over the world!</h2>
 
-						<p>Search through different content and bookmark what you like,
-                        us nerds will then go to work to and recommend similar content. We have many
-                        discussions about web technologies that usually catch the attention of
-                        others maybe it will catch yours too. We want to help you discover what you
-                        like so come on and open your free account.</p>
+						<p>Look through the pages and let us give you new ideas, we will compare your interests
+                            with the interests of others and give you recommendations that may spark new ideas.
+                            We cover topics such as web technologies and personal development that usually
+                            catch the attention of others maybe it will catch yours too. We want to help you
+                            discover what you like so come in and open your mind and your account (20 super
+                            easy payments of $99.99 plus your driver license and your house key).</p>
 					</section>
 
 				<!-- Two -->
@@ -54,13 +62,14 @@
                     echo"<section id=\"two\" class=\"feature\">
 						<div class=\"row\">
 							<div class=\"4u 12u$(medium)\">
-								<h2>Discussions</h2>
+								<h2>Ideas</h2>
 								<p>When it comes to writing code always write like the guy who maintains
-                                your code is a raging sociopath that knows where you live.
-                                    We love linux, databases and PHP so thats what we focus on here.</p>
-								<ul class=\"actions\">
-									<li><a href=\"#\" class=\"button\">Bookmark</a></li>
-								</ul>
+                                your code is a raging sociopath that knows where you live (in a darth-vader voice).
+                                </p>
+
+                                <ul class=\"actions\">
+                                    <li><a href=\"discussions.php\" class=\"button\">Go there</a></li>
+                                </ul>
 							</div>
 							<div class=\"8u$ 12u$(medium)\">
 								<ul class=\"major-icons row\">
@@ -95,7 +104,6 @@
                 }
                 ?>
 
-
 				<!-- Three -->
 					<section id="three" class="feature">
 						<div class="row">
@@ -104,38 +112,38 @@
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Pictures of nerdstuff</h3>
-												<img src="images/pic01.jpg" alt="" />
+												<h3 class="caption">work on the go</h3>
+												<img src="images/laptop.JPG" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of a really nice computer setup</h3>
-												<img src="images/pic02.jpg" alt="" />
+												<h3 class="caption">some of our group</h3>
+												<img src="images/class.JPG" alt="" />
 											</a>
 										</div>
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of our team</h3>
-												<img src="images/pic03.jpg" alt="" />
+												<h3 class="caption">web and how it works</h3>
+												<img src="images/http.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of servers</h3>
-												<img src="images/pic04.jpg" alt="" />
+												<h3 class="caption">our team will make it happen</h3>
+												<img src="images/team.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of us doing homework/paperwork</h3>
-												<img src="images/pic05.jpg" alt="" />
+												<h3 class="caption">what the future holds</h3>
+												<img src="images/money.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
 											<a href="#" class="image fit">
-												<h3 class="caption">Picture of future jobs</h3>
-												<img src="images/pic06.jpg" alt="" />
+												<h3 class="caption">ideas ideas ideas</h3>
+												<img src="images/bulbs2.jpg" alt="" />
 											</a>
 										</div>
 									</div>
@@ -143,32 +151,35 @@
 							</div>
 							<div class="4u$ 12u$(medium) important(medium)">
 								<h2>Work hard or hardly work</h2>
-								<p>We have had many obstacles and overcame a lot, but the thing that keeps us moving forward is the goal we have set for ourselves yesterday. There is no problem too big when you see yourself as the storm instead of hiding from it. By the way, this gives me an idea, we should start taking photos of the group everytime we have class, we will need them in the future so we can fill in these spots.</p>
+								<p>We have had many obstacles and overcame a lot, but the thing that keeps us moving
+                                    forward is the goal we have set for ourselves yesterday (and also money). There
+                                    is no problem too big when you see yourself as the storm instead of hiding from it.</p>
 
-								<p>The goal is to create a website where people can actually browse and choose what they like (and set bookmarks) instead of just an informational site that does nothing. I was thinking that we can put up different discussions about different topics and this will provide a selection platform for our visitors. Again, this functionality will only be available to those who are logged in.</p>
-								<ul class="actions">
-                                    <?php
-                                    if(isset($_SESSION['valid_user'])){
-                                        echo"<li><a href=\"#\" class=\"button\">Bookmark</a></li>";
-                                    } else {
-                                        echo"<li><a href=\"auth/login.php\" class=\"button\">Login</a></li>";
-                                    }
-                                    ?>
-								</ul>
+								<p>This website is here to help generate ideas. We will give you topics and
+                                you let your imagination go as you come up with websites you can bookmark and learn
+                                from...oh but when your imagination comes back make sure it brings pizza. The idea is
+                                    to think outside the box, in other words don't be religious cause
+                                when you search for knowledge you cant just do what someone told you to do.</p>
+								<?php
+                                if(isset($_SESSION['valid_user'])){
+                                    echo"<ul class=\"actions\">
+                                            <li><a href=\"bookmarks/bookmark.php?bk_message=Make your team effective by using a VCS like github\" class=\"button\">Bookmark</a></li>
+                                        </ul>";
+                                }
+                                ?>
 							</div>
 						</div>
 					</section>
 
-				<!-- Four -->
                 <?php
                 if(!isset($_SESSION['valid_user'])){
                     echo"<section id=\"four\" class=\"feature major\">
-						<h2>Right this way...</h2>
-						<p>Clicking the \"Join now\" button will take the visitor to a page where he can create an account. I think the page should be simple, only asking for a name, email and password (and ofcourse confirm password).</p>
-						<ul class=\"actions\">
-							<li><a href=\"auth/signup.php\" class=\"button big special\">Join now!</a></li>
-						</ul>
-					</section>";
+                            <h2>Right this way...</h2>
+                            <p>Clicking the \"Join now\" button will take the visitor to a page where he can create an account. I think the page should be simple, only asking for a name, email and password (and ofcourse confirm password).</p>
+                            <ul class=\"actions\">
+                                <li><a href=\"auth/signup.php\" class=\"button big special\">Join now!</a></li>
+                            </ul>
+                        </section>";
                 }
                 ?>
 			</div>

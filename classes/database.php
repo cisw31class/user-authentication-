@@ -51,7 +51,7 @@ class Database {
                          where username='".$username."'
                          and passwd = sha1('".$password."')");
         if (!$result) {
-          $this->set_message("The account for " . $username . " was not found with given credentials");
+            $this->set_message("The account for " . $username . " was not found with given credentials");
         }
 
         if ($result->num_rows>0) {

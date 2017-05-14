@@ -25,7 +25,7 @@ function display_signup(){
                     </div>
                 </div>
                 <div class="form-bottom">
-                    <form role="form" action="../new_user/register_new.php" method="POST" class="registration-form">
+                    <form role="form" action="../new_user/register_new.php" method="post" class="registration-form">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Name..." class="form-first-name form-control" id="name">
                         </div>
@@ -44,12 +44,6 @@ function display_signup(){
                         <h3 id="error2" align="center" style="color: #ff1118;
                                                             background-color: #bff3ff;
                                                             border-radius: 5px;"></h3>
-                        <h3 id="error3" align="center" style="color: #ff1118;
-                                                            background-color: #bff3ff;
-                                                            border-radius: 5px;"></h3>
-                        <h3 id="error4" align="center" style="color: #ff1118;
-                                                            background-color: #bff3ff;
-                                                            border-radius: 5px;"></h3>                                                                        
                         <button type="submit" class="btn" id="submitButton">Sign me up!</button><br><br>
                          <a href="../index.php"><button type="button" class="btn btn-danger">Nevermind</button></a>
                     </form>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php require_once "../html_output/html_main.php"; ?>
-<?php require_once "../classes/database.php"; ?>
 <html lang="en">
     <head>
         <title>Login</title>
@@ -21,7 +20,6 @@
                     <!--LOGIN FORM-->
                 </div>
             </div>
-
 
         </div>
 

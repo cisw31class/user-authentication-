@@ -1,15 +1,12 @@
 <?php
-require_once "../classes/database.php";
 /**
  * Created by PhpStorm.
  * User: ocean
- * Date: 4/30/17
- * Time: 9:37 PM
+ * Date: 5/7/17
+ * Time: 9:20 AM
  */
-$database= new Database();
-
 session_start();
 
 session_destroy();
 
-$database->redirect('../til_next_time/goodbye.php');
+header("Location: ../index.php");

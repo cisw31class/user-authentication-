@@ -7,40 +7,37 @@
  */
 function display_nav_bar(){
     //This function outputs the HTML for the nav bar
-    echo"
-            <header id='header'>
+
+          echo "<header id='header'>
 				<h1><a href='https://github.com/cisw31class/user-authentication-'><!--PLACEHOLDER--></a></h1>
 				<nav id='nav'>
 					<ul>";
-                        if(isset($_SESSION['valid_user'])) {
-                            echo"<li><a href='auth/logout.php'>Logout</a></li>
-                                    <li class='special'>
-                                    <a href='#menu' class='icon fa-bars'>Menu</a>
-                                    <div id='menu'>
-                                        <ul>
-                                            <li><a href='index.php'>Home</a></li>
-                                            <li><a href='profile.php'>Profile</a></li>
-                                            <li><a href='discussions.php'>Discussions</a></li>
-                                            <li><a href='all_nerds.php'>Classmates</a></li>
-                                            <li><a href='contact.php'>Contact</a></li>
-                                        </ul>
-                                    </div>
-                                </li>";
+                        if(isset($_SESSION['valid_user'])){
+                            echo"<li><a href='auth/logout.php'>Logout</a></li>";
                         } else {
-                            echo"<li><a href='auth/login.php'>Login</a></li>
-                                <li class='special'>
-                                    <a href='#menu' class='icon fa-bars'>Menu</a>
-                                    <div id='menu'>
-                                        <ul>
-                                            <li><a href='index.php'>Home</a></li>
-                                            <li><a href='contact.php'>Contact</a></li>
-                                        </ul>
-                                    </div>
-						        </li>";
+                            echo"<li><a href='auth/signup.php'>Sign Up</a></li>
+						        <li><a href='auth/login.php'>Log In</a></li>";
                         }
-
-                echo"</ul>
-                </nav>
-            </header>";
+                    echo"<li class='special'>
+							<a href='#menu' class='icon fa-bars'>Menu</a>
+							<div id='menu'>
+								<ul>";
+                                    if(isset($_SESSION['valid_user'])){
+                                        echo"<li><a href='index.php'>Home</a></li>
+                                            <li><a href='profile.php'>Profile</a></li>
+                                            <li><a href='discussions.php'>Topics</a></li>
+                                            <li><a href='bookmarks/bookmark.php'>Bookmarks</a></li>
+                                            <li><a href='recommend.php'>Recommendations</a></li>
+                                            <li><a href='all_nerds.php'>Classmates</a></li>";
+                                    } else {
+                                        echo"<li><a href='index.php'>Home</a></li>
+                                             <li><a href='reset_password.php'>Reset Password</a></li>";
+                                    }
+                            echo"</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>";
 
 }
