@@ -124,7 +124,7 @@
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
 												<h3 class="caption">work on the go</h3>
-												<img src="images/laptop.JPG" alt="" />
+												<img src="images/working.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
