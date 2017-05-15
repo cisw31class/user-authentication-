@@ -1,7 +1,12 @@
 <?php require_once "html_output/html_main.php"; ?>
 <?php session_start(); ?>
     <!DOCTYPE HTML>
-    <html>
+<?php
+if(!isset($_SESSION['valid_user'])){
+    header("Location: error_page/error.php?error_message=You are not authorized to be here!");
+}
+?>
+<html>
 <head>
     <title>Discussions</title>
     <!--HEADER-->

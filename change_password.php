@@ -2,6 +2,11 @@
 <?php session_start(); ?>
 <!DOCTYPE HTML>
 <?php require_once "classes/database.php"; ?>
+<?php
+if(!isset($_SESSION['valid_user'])){
+    header("Location: error_page/error.php?error_message=You are not authorized to be here!");
+}
+?>
 <html>
 	<head>
 		<title>Change Password</title>

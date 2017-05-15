@@ -2,6 +2,10 @@
 <!DOCTYPE HTML>
 <?php
 session_start();
+if(!isset($_SESSION['valid_user'])){
+    header("Location: error_page/error.php?error_message=You are not authorized to be here!");
+}
+
 $username= $_SESSION['valid_user'];
 ?>
 <html>
