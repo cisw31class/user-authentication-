@@ -10,7 +10,7 @@ $capitol= ucfirst($_SESSION['valid_user']);
 ?>
 <html>
 	<head>
-        <title><?php echo $username; ?></title>
+        <title><?php echo $capitol; ?></title>
         <!--HEADER-->
         <?php display_header(); ?>
         <!--HEADER-->

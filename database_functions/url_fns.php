@@ -90,11 +90,12 @@ function recommend_urls($valid_user, $popularity = 1) {
             group by bm_url
             having count(bm_url)>".$popularity;
   if (!($result = $conn->query($query))) {
-      set_recommend_message("<h4 class='text-center'>Not enough users to complete a recommendation</h4>");
+    //THIS SECOND ERROR MESSAGE SEEMS REDUNDANT SO I AM LEAVING IT OUT
+      //set_recommend_message("<h4 class='alert alert-warning text-center'>Not enough users to complete a recommendation</h4>");
     //throw new Exception('Could not find any bookmarks to recommend.');
   }
   if ($result->num_rows==0) {
-      set_recommend_message("<h4 class='text-center'>Not enough users to complete a recommendation</h4>");
+      set_recommend_message("<h4 class='alert alert-warning text-center'>Not enough users to complete a recommendation</h4>");
     //throw new Exception('Could not find any bookmarks to recommend.');
   }
   $urls = array();
