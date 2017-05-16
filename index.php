@@ -31,8 +31,20 @@
 				</div>
 			</section>
 
+        <br><br>
+        <?php
+        if(isset($_SESSION['valid_user'])){
+            echo"<div class=\"container\">
+                    <div class=\"row\" align=\"right\">
+                        <div class=\"col-md-12\">
+                            <a href=\"read_directory.php\" class=\"btn btn-primary\">Project Files</a>
+                        </div>
+                    </div>
+                </div>";
+        }
+        ?>
 
-		<!-- Main -->
+        <!-- Main -->
 			<div id="main" class="container">
 				<!-- One -->
                     <?php
