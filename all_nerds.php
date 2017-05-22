@@ -48,7 +48,7 @@ if(!isset($_SESSION['valid_user'])){
                         <tr>
                             <td><?php echo $row->username; ?></td>
                             <td><a href="mailto:<?php echo $row->email; ?>"><?php echo $row->email; ?></a></td>
-                            <td><img src="images/avatar.png" height="62" width="62" class="img-circle"></td>
+                            <td><img src="<?php echo $row->user_pic ? 'nerd_pics/'.$row->user_pic : 'PLACEHOLDER/avatar.JPG'; ?>" height="62" width="62" class="img-circle"></td>
                         <tr>
                         <?php } ?>
                     </table>

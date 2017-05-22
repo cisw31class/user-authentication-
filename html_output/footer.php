@@ -13,7 +13,7 @@ function display_footer(){
             <div class='row'>
                 <section class='4u 12u$(medium) about'>
                     <h2>Is that...</h2>
-                    <p>Yes its called JSON and we think that if you don't scratch it, it should go away on its own.</p>";
+                    <p>Yes its called sequel and we think that if you don't scratch it, it should go away on its own.</p>";
                     if(isset($_SESSION['valid_user'])){
                         echo"<ul class='actions'>
                                 <li><a href='bookmarks/bookmark.php?bk_message=or maybe they have a cream for it now' class='button'>Bookmark</a></li>

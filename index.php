@@ -21,8 +21,8 @@
 					<h2>Nerd Advice</h2>
 					<ul class="actions">
                         <?php if(isset($_SESSION['valid_user'])){
-                            $username= $_SESSION['valid_user'];
-                            echo "<li><a href=\"profile.php\" class=\"button big special\">$username's Account</a></li>";
+                            $capitol= ucfirst($_SESSION['valid_user']);
+                            echo "<li><a href=\"profile.php\" class=\"button big special\">$capitol's Account</a></li>";
                         } else {
                             echo"<li><a href=\"auth/signup.php\" class=\"button big special\">Not a member?</a></li>";
                         }
@@ -31,29 +31,52 @@
 				</div>
 			</section>
 
+        <br><br>
+        <?php
+        if(isset($_SESSION['valid_user'])){
+            echo"<div class=\"container\">
+                    <div class=\"row\" align=\"right\">
+                        <div class=\"col-md-12\">
+                            <a href=\"read_directory.php\" class=\"btn btn-primary\">Project Files</a>
+                        </div>
+                    </div>
+                </div>";
+        }
+        ?>
 
-		<!-- Main -->
+        <!-- Main -->
 			<div id="main" class="container">
 				<!-- One -->
                     <?php
                     if(isset($_SESSION['valid_user'])){
                         $results= recommend_urls($_SESSION['valid_user'], $popularity=1);
-                        echo"<h3><strong>Recommendations</strong></h3>";
-                        foreach ($results as $result){
-                            echo"<p><a href='".$result."'>".$result."</a></p>";
+                        if($results){
+                            echo"<h3><strong>Recommendations</strong></h3>";
+                            foreach ($results as $result){
+                                echo"<p><a href='".$result."'>".$result."</a></p>";
+                            }
                         }
                     }
                     ?>
 					<section id="one" class="feature major">
 						<span class="icon alt major fa-paper-plane"></span>
 						<h2>Nerd Advice can help you take over the world!</h2>
-
-						<p>Look through the pages and let us give you new ideas, we will compare your interests
+                        <?php
+                        if(isset($_SESSION['valid_user'])){
+                            echo"<p>".$capitol." I'm guessing you are about 30 years old, which means you have about 30 more years 
+                                left on this earth (if you eat right and stay healthy and if you don't get hit by a car 
+                                or some other tragic accident). Thats only about 360 months or 11,000 days and then you 
+                                will be gone so hurry up and bookmark the life out of these web pages so you can learn
+                                something!!</p>";
+                        } else {
+                            echo"<p>Look through the pages and let us give you new ideas, we will compare your interests
                             with the interests of others and give you recommendations that may spark new ideas.
                             We cover topics such as web technologies and personal development that usually
                             catch the attention of others maybe it will catch yours too. We want to help you
                             discover what you like so come in and open your mind and your account (20 super
-                            easy payments of $99.99 plus your driver license and your house key).</p>
+                            easy payments of $99.99 plus your driver license and your house key).</p>";
+                        }
+                        ?>
 					</section>
 
 				<!-- Two -->
@@ -113,7 +136,7 @@
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
 												<h3 class="caption">work on the go</h3>
-												<img src="images/laptop.JPG" alt="" />
+												<img src="images/working.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
@@ -175,7 +198,8 @@
                 if(!isset($_SESSION['valid_user'])){
                     echo"<section id=\"four\" class=\"feature major\">
                             <h2>Right this way...</h2>
-                            <p>Clicking the \"Join now\" button will take the visitor to a page where he can create an account. I think the page should be simple, only asking for a name, email and password (and ofcourse confirm password).</p>
+                            <p>Clicking the \"Join now\" button will take you to a signup page where you can signup and 
+                            meet the nerds because honestly, your actions testify to the fact that you don't know anything.</p>
                             <ul class=\"actions\">
                                 <li><a href=\"auth/signup.php\" class=\"button big special\">Join now!</a></li>
                             </ul>

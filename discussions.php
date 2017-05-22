@@ -2,6 +2,10 @@
 <!DOCTYPE HTML>
 <?php
 session_start();
+if(!isset($_SESSION['valid_user'])){
+    header("Location: error_page/error.php?error_message=You are not authorized to be here!");
+}
+
 $username= $_SESSION['valid_user'];
 ?>
 <html>
@@ -21,7 +25,7 @@ $username= $_SESSION['valid_user'];
 			<div id="main" class="container">
 				<header class="major">
 					<h2>Topics</h2>
-					<p>Let us give you ideas, you just bookmark what you like</p>
+					<p>Let us give you ideas, you just bookmark them</p>
 				</header>
 				<div class="row 150%">
 					<div class="4u 12u$(medium)">
@@ -69,7 +73,7 @@ $username= $_SESSION['valid_user'];
                                     money well and become friends with rich people. Create the environment for yourself
                                     blood sweat and tears, it will never just happen to you.
                                     <ul class="actions">
-                                        <li><a href="bookmarks/bookmark.php?bk_message=Never fear the storm, just convince yourself you are the storm" class="button small alt">Bookmark</a></li>
+                                        <li><a href="bookmarks/bookmark.php?bk_message=Everything in life happens for a reason but you cant see that reason" class="button small alt">Bookmark</a></li>
                                     </ul>
                                 </p>
 

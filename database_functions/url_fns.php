@@ -58,12 +58,16 @@ function delete_bm($user, $url) {
   return true;
 }
 
+
+
+
+
+
 function recommend_urls($valid_user, $popularity = 1) {
   // We will provide semi intelligent recomendations to people
   // If they have an URL in common with other users, they may like
   // other URLs that these people like
   $conn = db_connect();
-
   // find other matching users
   // with an url the same as you
   // as a simple way of excluding people's private pages, and
@@ -71,7 +75,6 @@ function recommend_urls($valid_user, $popularity = 1) {
   // specify a minimum popularity level
   // if $popularity = 1, then more than one person must have
   // an URL before we will recomend it
-
   $query = "select bm_URL
 	          from bookmark
 	          where username in
@@ -86,23 +89,20 @@ function recommend_urls($valid_user, $popularity = 1) {
 				        where username='".$valid_user."')
             group by bm_url
             having count(bm_url)>".$popularity;
-
   if (!($result = $conn->query($query))) {
-      set_recommend_message("<h4 class='text-center'>Not enough users to complete a recommendation</h4>");
+    //THIS SECOND ERROR MESSAGE SEEMS REDUNDANT SO I AM LEAVING IT OUT
+      //set_recommend_message("<h4 class='alert alert-warning text-center'>Not enough users to complete a recommendation</h4>");
     //throw new Exception('Could not find any bookmarks to recommend.');
   }
-
   if ($result->num_rows==0) {
-      set_recommend_message("<h4 class='text-center'>Not enough users to complete a recommendation</h4>");
+      set_recommend_message("<h4 class='alert alert-warning text-center'>Not enough users to complete a recommendation</h4>");
     //throw new Exception('Could not find any bookmarks to recommend.');
   }
-
   $urls = array();
   // build an array of the relevant urls
   for ($count=0; $row = $result->fetch_object(); $count++) {
      $urls[$count] = $row->bm_URL;
   }
-
   return $urls;
 }
 ?>

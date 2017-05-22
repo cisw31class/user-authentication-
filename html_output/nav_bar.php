@@ -28,7 +28,8 @@ function display_nav_bar(){
                                             <li><a href='discussions.php'>Topics</a></li>
                                             <li><a href='bookmarks/bookmark.php'>Bookmarks</a></li>
                                             <li><a href='recommend.php'>Recommendations</a></li>
-                                            <li><a href='all_nerds.php'>Classmates</a></li>";
+                                            <li><a href='all_nerds.php'>Classmates</a></li>
+                                            <li><a href='read_directory.php'>Project Files</a></li>";
                                     } else {
                                         echo"<li><a href='index.php'>Home</a></li>
                                              <li><a href='reset_password.php'>Reset Password</a></li>";
