@@ -136,7 +136,7 @@
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
 												<h3 class="caption">work on the go</h3>
-												<img src="images/working.jpg" alt="" />
+												<img src="images/group4.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
@@ -148,25 +148,25 @@
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
 												<h3 class="caption">web and how it works</h3>
-												<img src="images/http.jpg" alt="" />
+												<img src="images/group2.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
 											<a href="#" class="image fit">
 												<h3 class="caption">our team will make it happen</h3>
-												<img src="images/team.jpg" alt="" />
+												<img src="images/group3.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u 12u$(xsmall)">
 											<a href="#" class="image fit">
 												<h3 class="caption">what the future holds</h3>
-												<img src="images/money.jpg" alt="" />
+												<img src="images/group5.jpg" alt="" />
 											</a>
 										</div>
 										<div class="6u$ 12u$(xsmall)">
 											<a href="#" class="image fit">
 												<h3 class="caption">ideas ideas ideas</h3>
-												<img src="images/bulbs2.jpg" alt="" />
+												<img src="images/group.jpg" alt="" />
 											</a>
 										</div>
 									</div>

@@ -92,8 +92,13 @@ $capitol= ucfirst($_SESSION['valid_user']);
                                     <?php display_message(); ?>
                                     <?php display_recommend_message(); ?>
 
+
+
+
+                                
+
 									<div id="profile_pic">
-										<img src="<?php echo $current_pic ? 'nerd_pics/'.$current_pic : 'PLACEHOLDER/avatar.JPG'   ?>" class="img-circle" height="200" width="200">
+										<img src="<?php echo $current_pic ? 'nerd_pics/'.$current_pic : 'PLACEHOLDER/avatar.JPG' ?>" class="img-circle" height="200" width="200">
 									</div>
 
 									<br><br>
